@@ -220,16 +220,158 @@
                 </p>
             </div>
             
-            <div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-[#3b494c]/30 mx-auto max-w-5xl">
-                <img src="imagens/antes-e-depois.png" class="w-full h-full object-cover opacity-60" alt="Antes e depois">
-                <div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-sm px-4 py-1 rounded text-[#e2e2e2] text-xs uppercase border border-[#3b494c]">
-                    Antes
+<div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-[#3b494c]/30 mx-auto max-w-5xl">
+    <!-- Carrossel -->
+    <div class="relative w-full h-full overflow-hidden">
+        <div id="carouselTrack" class="flex transition-transform duration-500 ease-out h-full">
+            <!-- 5 slides com a mesma imagem -->
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois1.png" class="w-full h-full object-cover" alt="Foto 1">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    1 / 10
                 </div>
-                <div class="absolute top-4 right-4 bg-primary-container/20 backdrop-blur-sm px-4 py-1 rounded text-primary text-xs uppercase border border-primary-container/50">
-                    Depois
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois2.png" class="w-full h-full object-cover" alt="Foto 2">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    2 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois3.png" class="w-full h-full object-cover" alt="Foto 3">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    3 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois4.png" class="w-full h-full object-cover" alt="Foto 4">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    4 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois5.png" class="w-full h-full object-cover" alt="Foto 5">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    5 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois6.png" class="w-full h-full object-cover" alt="Foto 6">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    6 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois7.png" class="w-full h-full object-cover" alt="Foto 7">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    7 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois8.png" class="w-full h-full object-cover" alt="Foto 8">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    8 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois9.png" class="w-full h-full object-cover" alt="Foto 9">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    9 / 10
+                </div>
+            </div>
+            <div class="min-w-full h-full relative flex-shrink-0">
+                <img src="imagens/antes-e-depois10.png" class="w-full h-full object-cover" alt="Foto 10">
+                <div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">
+                    10 / 10
                 </div>
             </div>
         </div>
+
+        <!-- Botões de navegação -->
+        <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200 cursor-pointer z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200 cursor-pointer z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+
+        <!-- Indicadores (dots) -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-200" data-index="0"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-200" data-index="1"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-200" data-index="2"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-200" data-index="3"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50 cursor-pointer transition-all duration-200" data-index="4"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Script do carrossel
+    (function() {
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('#carouselTrack > div');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.absolute.bottom-4.left-1\\/2 .flex .w-2');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        
+        function updateCarousel() {
+            // Move o track
+            const offset = -currentIndex * 100;
+            track.style.transform = `translateX(${offset}%)`;
+            
+            // Atualiza os dots
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-white', 'scale-125');
+                } else {
+                    dot.classList.remove('bg-white', 'scale-125');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        // Eventos dos botões
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        
+        // Eventos dos dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+        
+        // Autoplay (opcional - descomente para ativar)
+        // let autoplayInterval = setInterval(nextSlide, 5000);
+        
+        // Pausar autoplay ao passar o mouse (opcional)
+        // const container = document.querySelector('.relative.w-full');
+        // container.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+        // container.addEventListener('mouseleave', () => {
+        //     autoplayInterval = setInterval(nextSlide, 5000);
+        // });
+    })();
+</script>
     </section>
 
     <!-- ===== TESTIMONIALS ===== -->
