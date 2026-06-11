@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lavagem Tarragô | Estética Automotiva Premium</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <style>
+        /* ===== CUSTOM CONFIGURATION ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #121414;
+            color: #e2e2e2;
+        }
+        
+        /* Typography */
+        .font-display { font-family: 'Bebas Neue', cursive; }
+        .font-headline { font-family: 'Montserrat', sans-serif; }
+        
+        /* Effects */
+        .glass {
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 73, 76, 0.3);
+        }
+        
+        .glass-cyan {
+            background: rgba(0, 229, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+        
+        .text-glow { text-shadow: 0 0 8px #00e5ff; }
+        .box-glow { box-shadow: 0 0 20px -5px #00e5ff; }
+        
+        .carbon-bg {
+            background-image: radial-gradient(#3b494c 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        /* Utility Classes */
+        .transition-smooth { transition: all 0.25s ease-in-out; }
+        .bg-surface\/80 { background-color: rgba(18, 20, 20, 0.8); }
+        .bg-surface\/95 { background-color: rgba(18, 20, 20, 0.95); }
+        .text-primary { color: #c3f5ff; }
+        .text-primary-container { color: #00e5ff; }
+        .bg-primary-container { background-color: #00e5ff; }
+        .text-on-primary-container { color: #00626e; }
+        .border-primary-container\/50 { border-color: rgba(0, 229, 255, 0.5); }
+        .bg-surface-container { background-color: #1e2020; }
+        .bg-surface-container-low { background-color: #1a1c1c; }
+        .bg-surface-dim { background-color: #121414; }
+        .text-on-surface-variant { color: #bac9cc; }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- ===== HEADER ===== -->
+    <header id="header" class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-md border-b border-[#3b494c]/20 transition-all duration-300 py-4">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 flex justify-between items-center">
+            <span class="font-display text-3xl md:text-5xl text-primary uppercase italic tracking-tighter">
+                LAVAGEM TARRAGÔ
+            </span>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#resultados" class="nav-link">Resultados</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#unidades" class="nav-link">Unidades</a>
+            </nav>
+            
+            <button class="btn-primary hidden md:inline-flex" data-wa-message="agendar horario">
+                Agendar Horário
+            </button>
+            
+            <button id="mobileMenuBtn" class="md:hidden text-primary p-2">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#121414] via-[#121414]/80 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-transparent to-transparent z-10"></div>
+            <img src="imagens/landing.png" class="w-full h-full object-cover opacity-60" alt="Carro sendo lavado">
+        </div>
+        
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 w-full relative z-20">
+            <div class="max-w-2xl">
+                <div class="badge-cyan mb-6">
+                    <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                    <span class="font-headline text-[10px] font-bold text-primary uppercase">
+                        Estúdio de Detalhamento Premium
+                    </span>
+                </div>
+                
+                <h1 class="font-display text-5xl md:text-7xl text-[#e2e2e2] uppercase mb-6 drop-shadow-xl">
+                    O brilho de carro zero <br>
+                    <span class="text-primary text-glow italic">que o seu veículo merece.</span>
+                </h1>
+                
+                <p class="text-[18px] leading-relaxed text-on-surface-variant mb-10 max-w-xl">
+                    Estética automotiva de alto padrão e lavagem detalhada para quem é apaixonado por carros. 
+                    Precisão, técnica e os melhores produtos.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="btn-primary btn-large" data-wa-message="quero agendar minha lavagem">
+                        Quero agendar minha lavagem
+                    </button>
+                    <a href="#servicos" class="btn-secondary group">
+                        Ver Serviços 
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="py-24 bg-surface-dim carbon-bg" id="servicos">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12">
+            <div class="mb-16">
+                <h2 class="font-display text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">
+                    Nossos <span class="text-primary">Serviços</span>
+                </h2>
+                <p class="text-[18px] text-on-surface-variant max-w-2xl">
+                    Do cuidado essencial à restauração completa. Soluções de alto nível desenhadas para proteger e realçar seu investimento.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Higienização Detalhada -->
+                <div class="service-card md:col-span-8 relative min-h-[400px]">
+                    <img src="imagens/higienizacao.png" class="w-full h-full object-cover opacity-60" alt="Higienização detalhada">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="badge-primary mb-4">Mais Procurado</div>
+                        <h3 class="font-headline text-2xl font-black text-[#e2e2e2] uppercase mb-2">
+                            Higienização Detalhada
+                        </h3>
+                        <p class="text-[16px] text-on-surface-variant mb-6 max-w-lg">
+                            Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção com ozônio.
+                        </p>
+                        <button class="service-link" data-wa-message="quero agendar minha lavagem">
+                            Agendar <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Proteção e Vitrificação -->
+                <div class="glass-cyan md:col-span-4 rounded relative min-h-[400px] group flex flex-col justify-end p-8">
+                    <div class="absolute top-8 right-8 text-primary opacity-50 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-4xl">shield</span>
+                    </div>
+                    <h3 class="font-headline text-2xl font-black text-[#e2e2e2] uppercase mb-2">
+                        Proteção &amp; Vitrificação
+                    </h3>
+                    <p class="text-[16px] text-on-surface-variant mb-6">
+                        Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema.
+                    </p>
+                    <button class="service-link" data-wa-message="protecao e vitrificacao">
+                        Saiba Mais <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                    </button>
+                </div>
+                
+                <!-- Lavagem Premium -->
+                <div class="service-card-mini md:col-span-6">
+                    <div class="service-icon">water_drop</div>
+                    <h3 class="font-headline text-2xl font-black text-[#e2e2e2] uppercase mb-2">
+                        Lavagem Premium
+                    </h3>
+                    <p class="text-[16px] text-on-surface-variant mb-6">
+                        Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.
+                    </p>
+                    <button class="service-link" data-wa-message="agendar horario">
+                        Agendar horário <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+                
+                <!-- Polimento Técnico -->
+                <div class="service-card-mini md:col-span-6">
+                    <div class="service-icon">blur_on</div>
+                    <h3 class="font-headline text-2xl font-black text-[#e2e2e2] uppercase mb-2">
+                        Polimento Técnico
+                    </h3>
+                    <p class="text-[16px] text-on-surface-variant mb-6">
+                        Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.
+                    </p>
+                    <button class="service-link" data-wa-message="agendar horario">
+                        Agendar avaliação <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BEFORE & AFTER ===== -->
+    <section class="py-24 bg-surface-container-low border-y border-[#3b494c]/20" id="resultados">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">
+                    Padrão de <span class="text-primary italic">Resultados</span>
+                </h2>
+                <p class="text-[18px] text-on-surface-variant max-w-2xl mx-auto">
+                    A diferença entre lavar um carro e realizar um tratamento estético.
+                </p>
+            </div>
+            
+            <div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-[#3b494c]/30 mx-auto max-w-5xl">
+                <img src="imagens/antes-e-depois.png" class="w-full h-full object-cover opacity-60" alt="Antes e depois">
+                <div class="absolute top-4 left-4 bg-surface/80 backdrop-blur-sm px-4 py-1 rounded text-[#e2e2e2] text-xs uppercase border border-[#3b494c]">
+                    Antes
+                </div>
+                <div class="absolute top-4 right-4 bg-primary-container/20 backdrop-blur-sm px-4 py-1 rounded text-primary text-xs uppercase border border-primary-container/50">
+                    Depois
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="py-24 bg-surface-dim relative overflow-hidden" id="depoimentos">
+        <div class="absolute -right-[20%] top-0 w-[50%] h-[50%] bg-primary-container/5 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 relative z-10">
+            <h2 class="font-display text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-12">
+                O que dizem <br><span class="text-primary text-glow">nossos clientes</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="text-[16px] text-on-surface-variant italic mb-6">
+                        "Impressionante o nível de detalhe. Carro saiu parecendo zero. Serviço impecável."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RM</div>
+                        <div>
+                            <div class="font-headline font-bold text-[#e2e2e2] uppercase text-sm">Rafael M.</div>
+                            <div class="text-on-surface-variant text-xs">Porsche 911</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="text-[16px] text-on-surface-variant italic mb-6">
+                        "Vitrificação mudou tudo, brilho absurdo e facilidade na limpeza. Recomendo 100%."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LC</div>
+                        <div>
+                            <div class="font-headline font-bold text-[#e2e2e2] uppercase text-sm">Lucas C.</div>
+                            <div class="text-on-surface-variant text-xs">BMW M3</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="text-[16px] text-on-surface-variant italic mb-6">
+                        "A higienização interna removeu manchas impossíveis. Atendimento diferenciado."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FS</div>
+                        <div>
+                            <div class="font-headline font-bold text-[#e2e2e2] uppercase text-sm">Fernanda S.</div>
+                            <div class="text-on-surface-variant text-xs">Audi Q5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATIONS SECTION ===== -->
+    <section class="py-24 bg-surface-container-low border-t border-[#3b494c]/20" id="unidades">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="badge-cyan mb-6">
+                        <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+                        <span class="font-headline text-[10px] font-bold text-primary uppercase">Studio Principal</span>
+                    </div>
+                    
+                    <h2 class="font-display text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-8">
+                        Onde a mágica <br><span class="text-primary italic">Acontece</span>
+                    </h2>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="info-item">
+                            <span class="material-symbols-outlined text-on-surface-variant">map</span>
+                            <div>
+                                <h4 class="font-headline font-bold text-[#e2e2e2] uppercase mb-1">Endereço</h4>
+                                <p class="text-on-surface-variant">
+                                    Av. Ary Tarragô, 1000<br>
+                                    Bairro Jardim Itu-Sabara<br>
+                                    Porto Alegre - RS
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <span class="material-symbols-outlined text-on-surface-variant">schedule</span>
+                            <div>
+                                <h4 class="font-headline font-bold text-[#e2e2e2] uppercase mb-1">Horário de Funcionamento</h4>
+                                <p class="text-on-surface-variant">
+                                    Segunda a Sexta: 08:00 - 18:00<br>
+                                    Sábados: 08:00 - 14:00 (Agendados)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-secondary w-full sm:w-auto" data-wa-message="informacoes como chegar">
+                        <span class="material-symbols-outlined mr-2">directions_car</span>
+                        Como Chegar (Waze)
+                    </button>
+                </div>
+                
+                <div class="map-container group">
+                    <img src="imagens/mapa.png" class="w-full h-full object-cover opacity-60 grayscale group-hover:opacity-80 transition duration-500" alt="Mapa">
+                    <div class="map-pin">
+                        <div class="pin-icon animate-bounce">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-[#3b494c]/30 text-on-surface-variant">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] mx-auto">
+            <div>
+                <div class="font-headline text-2xl font-black text-[#e2e2e2] uppercase mb-4">
+                    LAVAGEM TARRAGÔ
+                </div>
+                <p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p>
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <button class="footer-link" data-wa-message="agendar horario">Polimento</button>
+                <button class="footer-link" data-wa-message="protecao e vitrificacao">Ceramic Coating</button>
+                <button class="footer-link" data-wa-message="quero agendar minha lavagem">Interior</button>
+            </div>
+            
+            <div class="md:text-right text-sm">
+                © 2025 LAVAGEM TARRAGÔ. Porto Alegre - RS. CNPJ: 00.000.000/0001-00.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <button id="whatsappFab" class="fab-whatsapp" data-wa-message="agendar horario">
+        <span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">chat</span>
+    </button>
+
+    <style>
+        /* Additional Styles for Clean Components */
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #bac9cc;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover { color: #c3f5ff; }
+        
+        .btn-primary {
+            align-items: center;
+            justify-content: center;
+            background-color: #00e5ff;
+            color: #00626e;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 12px 24px;
+            border-radius: 2px;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px -5px #00e5ff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #9cf0ff;
+        }
+        
+        .btn-large {
+            padding: 16px 32px;
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 73, 76, 0.3);
+            color: #c3f5ff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #282a2b;
+        }
+        
+        .badge-cyan {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            background-color: rgba(0, 229, 255, 0.1);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+        
+        .badge-primary {
+            display: inline-block;
+            background-color: #00e5ff;
+            color: #00626e;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 2px;
+        }
+        
+        .service-card {
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(59, 73, 76, 0.3);
+            background-color: #1e2020;
+            transition: border-color 0.3s;
+        }
+        
+        .service-card:hover { border-color: rgba(0, 229, 255, 0.5); }
+        
+        .service-card-mini {
+            border-radius: 4px;
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 73, 76, 0.3);
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        
+        .service-card-mini:hover { background-color: #282a2b; }
+        
+        .service-icon {
+            color: #3b494c;
+            margin-bottom: 24px;
+            transition: color 0.3s;
+        }
+        
+        .service-card-mini:hover .service-icon { color: #c3f5ff; }
+        
+        .service-icon::before {
+            content: attr(data-icon);
+            font-family: 'Material Symbols Outlined';
+            font-size: 36px;
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: #c3f5ff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .service-link:hover { color: #9cf0ff; }
+        
+        .testimonial-card {
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 73, 76, 0.3);
+            padding: 32px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .stars {
+            display: flex;
+            color: #c3f5ff;
+            margin-bottom: 16px;
+            letter-spacing: 4px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-top: 1px solid rgba(59, 73, 76, 0.3);
+            padding-top: 16px;
+        }
+        
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1e2020;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c3f5ff;
+            font-weight: bold;
+        }
+        
+        .info-item {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .map-container {
+            aspect-ratio: 4/3;
+            background-color: #1e2020;
+            border-radius: 4px;
+            border: 1px solid rgba(59, 73, 76, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .pin-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #00e5ff;
+            color: #121414;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+        }
+        
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 50;
+            width: 64px;
+            height: 64px;
+            background-color: #00e5ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #121414;
+            box-shadow: 0 0 20px -5px #00e5ff;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .fab-whatsapp:hover {
+            transform: scale(1.1);
+            background-color: #9cf0ff;
+        }
+        
+        .footer-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: inherit;
+            transition: color 0.3s;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .footer-link:hover { color: #c3f5ff; }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-bounce { animation: bounce 1s infinite; }
+    </style>
+
+    <script>
+        // ===== WHATSAPP INTEGRATION =====
+        const PHONE_NUMBER = "5551999999999";
+        const BASE_WA_URL = `https://wa.me/${PHONE_NUMBER}`;
+        
+        function redirectToWhatsApp(messageText) {
+            const finalMsg = messageText?.trim() || "Olá, vim pelo site da Lavagem Tarragô e gostaria de mais informações.";
+            window.open(`${BASE_WA_URL}?text=${encodeURIComponent(finalMsg)}`, '_blank');
+        }
+        
+        // Initialize all WhatsApp buttons
+        document.querySelectorAll('[data-wa-message]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                redirectToWhatsApp(btn.getAttribute('data-wa-message'));
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-surface/95', 'py-2');
+                header.classList.remove('bg-surface/80', 'py-4');
+            } else {
+                header.classList.add('bg-surface/80', 'py-4');
+                header.classList.remove('bg-surface/95', 'py-2');
+            }
+        });
+        
+        // Mobile menu (simplified)
+        document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
+            alert("Utilize o botão do WhatsApp para agendar seus serviços.");
+        });
+        
+        // Fix for service icons
+        document.querySelectorAll('.service-icon').forEach(el => {
+            const iconName = el.textContent?.trim() || el.innerText?.trim();
+            if (iconName) {
+                el.setAttribute('data-icon', iconName);
+                el.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
