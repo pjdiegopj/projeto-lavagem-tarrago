@@ -1,429 +1,335 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lavagem Tarragô - Estética Automotiva</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Montserrat:wght@400;700;900&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-container": "#00626e",
-                        "outline": "#849396",
-                        "surface-dim": "#121414",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "on-primary-fixed": "#001f24",
-                        "inverse-surface": "#e2e2e2",
-                        "outline-variant": "#3b494c",
-                        "primary-container": "#00e5ff",
-                        "on-surface": "#e2e2e2",
-                        "tertiary": "#e8edf5",
-                        "tertiary-fixed": "#dde3eb",
-                        "on-tertiary-container": "#545a60",
-                        "surface-container": "#1e2020",
-                        "primary": "#c3f5ff",
-                        "surface-container-high": "#282a2b",
-                        "on-tertiary-fixed": "#161c22",
-                        "on-secondary-fixed-variant": "#474746",
-                        "surface-container-low": "#1a1c1c",
-                        "primary-fixed": "#9cf0ff",
-                        "on-tertiary-fixed-variant": "#41474e",
-                        "primary-fixed-dim": "#00daf3",
-                        "on-secondary": "#313030",
-                        "on-background": "#e2e2e2",
-                        "on-secondary-container": "#b7b5b4",
-                        "on-tertiary": "#2b3137",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "secondary-container": "#474746",
-                        "inverse-on-surface": "#2f3131",
-                        "on-primary-fixed-variant": "#004f58",
-                        "on-error-container": "#ffdad6",
-                        "tertiary-container": "#cbd1d9",
-                        "error": "#ffb4ab",
-                        "on-error": "#690005",
-                        "surface": "#121414",
-                        "inverse-primary": "#006875",
-                        "surface-container-highest": "#333535",
-                        "surface-bright": "#38393a",
-                        "tertiary-fixed-dim": "#c1c7cf",
-                        "secondary": "#c8c6c5",
-                        "surface-container-lowest": "#0c0f0f",
-                        "on-surface-variant": "#bac9cc",
-                        "surface-tint": "#00daf3",
-                        "on-primary": "#00363d",
-                        "error-container": "#93000a",
-                        "secondary-fixed": "#e5e2e1",
-                        "background": "#121414",
-                        "surface-variant": "#333535"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-mobile": "16px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "container-max": "1280px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Bebas Neue"],
-                        "body-lg": ["Open Sans"],
-                        "label-bold": ["Montserrat"],
-                        "headline-lg": ["Bebas Neue"],
-                        "headline-md": ["Montserrat"],
-                        "display-lg": ["Bebas Neue"],
-                        "body-md": ["Open Sans"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["36px", { "lineHeight": "36px", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700" }],
-                        "headline-lg": ["48px", { "lineHeight": "48px", "fontWeight": "400" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "900" }],
-                        "display-lg": ["72px", { "lineHeight": "72px", "letterSpacing": "0.02em", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
-                    }
-                }
-            }
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lavagem Tarragô | Estética Automotiva Premium</title>
+    <!-- Tailwind + Google Fonts + Material Icons -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <style>
+        /* custom config override */
+        body {
+            font-family: 'Open Sans', sans-serif;
         }
-    </script>
-<style type="text/tailwindcss">
-        @layer utilities {
-            .glass {
-                @apply bg-surface/40 backdrop-blur-md border border-outline-variant/30;
-            }
-            .glass-cyan {
-                @apply bg-primary-container/10 backdrop-blur-xl border border-primary-container/30;
-            }
-            .text-glow {
-                text-shadow: 0 0 10px theme('colors.primary-container');
-            }
-            .box-glow {
-                box-shadow: 0 0 20px -5px theme('colors.primary-container');
-            }
-            .carbon-bg {
-                background-image: radial-gradient(theme('colors.outline-variant') 1px, transparent 1px);
-                background-size: 4px 4px;
-            }
+        .font-display-lg, .font-headline-lg, .font-headline-lg-mobile {
+            font-family: 'Bebas Neue', cursive;
+        }
+        .font-headline-md, .font-label-bold {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .glass {
+            background: rgba(18, 20, 20, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 73, 76, 0.3);
+        }
+        .glass-cyan {
+            background: rgba(0, 229, 255, 0.1);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px #00e5ff;
+        }
+        .box-glow {
+            box-shadow: 0 0 20px -5px #00e5ff;
+        }
+        .carbon-bg {
+            background-image: radial-gradient(#3b494c 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .transition-smooth {
+            transition: all 0.25s ease-in-out;
         }
     </style>
+    <style>
+        /* inline tailwind extras */
+        .bg-surface\/40 { background-color: rgba(18, 20, 20, 0.4); }
+        .bg-surface\/80 { background-color: rgba(18, 20, 20, 0.8); }
+        .bg-surface\/95 { background-color: rgba(18, 20, 20, 0.95); }
+        .border-outline-variant\/20 { border-color: rgba(59, 73, 76, 0.2); }
+        .border-outline-variant\/30 { border-color: rgba(59, 73, 76, 0.3); }
+        .text-on-surface-variant { color: #bac9cc; }
+        .bg-primary-container\/10 { background-color: rgba(0, 229, 255, 0.1); }
+        .bg-primary-container\/20 { background-color: rgba(0, 229, 255, 0.2); }
+        .from-surface { --tw-gradient-from: #121414; }
+        .via-surface\/80 { --tw-gradient-via: rgba(18, 20, 20, 0.8); }
+        .to-transparent { --tw-gradient-to: transparent; }
+        .from-surface-dim { --tw-gradient-from: #121414; }
+        .via-surface-dim\/80 { --tw-gradient-via: rgba(18, 20, 20, 0.8); }
+        .bg-surface-dim { background-color: #121414; }
+        .bg-surface-container { background-color: #1e2020; }
+        .bg-surface-container-high { background-color: #282a2b; }
+        .bg-surface-container-lowest { background-color: #0c0f0f; }
+        .bg-surface-container-low { background-color: #1a1c1c; }
+        .text-primary { color: #c3f5ff; }
+        .text-primary-container { color: #00e5ff; }
+        .bg-primary-container { background-color: #00e5ff; }
+        .text-on-primary-container { color: #00626e; }
+        .border-primary-container\/50 { border-color: rgba(0, 229, 255, 0.5); }
+        .hover\:bg-primary-fixed:hover { background-color: #9cf0ff; }
+        .hover\:text-primary-fixed:hover { color: #9cf0ff; }
+        .bg-primary-fixed-dim { background-color: #00daf3; }
+    </style>
 </head>
-<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden antialiased">
-<!-- Top Banner -->
-<div class="bg-primary-container text-on-primary-container text-center py-unit font-label-bold text-label-bold uppercase tracking-widest text-xs z-50 relative">
-<span aria-hidden="true" class="material-symbols-outlined align-middle text-[16px] mr-1">local_shipping</span>
-        Buscamos e entregamos seu veículo
-    </div>
-<!-- Header (Shared Component: TopNavBar) -->
-<header class="fixed top-8 w-full z-40 bg-surface/80 backdrop-blur-md border-b border-outline-variant/20 transition-all duration-300" id="main-header">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
-<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary italic uppercase tracking-tighter group-hover:text-glow transition-all duration-300">
-                     LAVAGEM TARRAGÔ
-                </span>
-</a>
-<!-- Navigation (Web) -->
-<nav class="hidden md:flex items-center gap-8">
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary hover:skew-x-[-5deg] transition-all duration-300 uppercase" href="#servicos">Serviços</a>
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary hover:skew-x-[-5deg] transition-all duration-300 uppercase" href="#resultados">Resultados</a>
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary hover:skew-x-[-5deg] transition-all duration-300 uppercase" href="#depoimentos">Depoimentos</a>
-<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary hover:skew-x-[-5deg] transition-all duration-300 uppercase" href="#unidades">Unidades</a>
-</nav>
-<!-- CTA -->
-<a class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-6 py-3 hover:bg-primary-fixed hover:skew-x-[-5deg] transition-all duration-300 box-glow rounded" href="#agendar">
-                Agendar Horário
-            </a>
-<!-- Mobile Menu Toggle -->
-<button aria-label="Toggle Menu" class="md:hidden text-primary p-2">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
-</button>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden">
-<!-- Background Image -->
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
-<img alt="Imagem de carro sendo lavado" class="w-full h-full object-cover opacity-60" src="imagens/landing.png"/>
-</div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-20">
-<div class="max-w-2xl">
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-cyan mb-6">
-<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-<span class="font-label-bold text-label-bold text-primary uppercase text-[10px]">Estúdio de Detalhamento Premium</span>
-</div>
-<h1 class="font-display-lg text-headline-lg md:text-display-lg text-on-surface uppercase mb-6 drop-shadow-xl">
-                    O brilho de carro zero <br/><span class="text-primary text-glow italic">que o seu veículo merece.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
-                    Estética automotiva de alto padrão e lavagem detalhada para quem é apaixonado por carros. Precisão, técnica e os melhores produtos do mercado.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-8 py-4 hover:bg-primary-fixed hover:skew-x-[-5deg] transition-all duration-300 box-glow rounded-sm text-center" href="#agendar">
-                        Quero agendar minha lavagem
-                    </a>
-<a class="inline-flex items-center justify-center glass text-primary font-label-bold text-label-bold uppercase px-8 py-4 hover:bg-surface-variant hover:skew-x-[-5deg] transition-all duration-300 rounded-sm text-center group" href="#servicos">
-                        Ver Serviços
-                        <span aria-hidden="true" class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Bento Grid -->
-<section class="py-24 bg-background relative" id="servicos">
-<div class="absolute inset-0 carbon-bg opacity-20 z-0"></div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-<div class="mb-16">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase mb-4">
-                    Nossos <span class="text-primary">Serviços</span>
-</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    Do cuidado essencial à restauração completa. Soluções de alto nível desenhadas para proteger e realçar seu investimento.
-                </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<!-- Highlight Service -->
-<div class="md:col-span-8 group rounded overflow-hidden relative min-h-[400px] border border-outline-variant/30 bg-surface-container hover:border-primary-container/50 transition-colors duration-500">
-<img alt="Higienização Detalhada" class="w-full h-full object-cover opacity-60" src="imagens/higienizacao.png"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-surface-dim/80 to-transparent"></div>
-<div class="absolute bottom-0 left-0 p-8 w-full">
-<div class="inline-block bg-primary-container text-on-primary-container font-label-bold text-[10px] uppercase px-3 py-1 mb-4 rounded-sm">Mais Procurado</div>
-<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-2">Higienização Detalhada</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-lg">
-                            Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção completa com ozônio. O ambiente interno renovado.
-                        </p>
-<a class="inline-flex items-center text-primary font-label-bold text-label-bold uppercase hover:text-primary-fixed transition-colors" href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer">
-                            Agendar <span aria-hidden="true" class="material-symbols-outlined ml-1 text-sm">arrow_outward</span>
-</a>
-</div>
-</div>
-<!-- Protective Coatings -->
-<div class="md:col-span-4 rounded overflow-hidden relative min-h-[400px] glass-cyan group flex flex-col justify-end p-8">
-<div class="absolute top-8 right-8 text-primary opacity-50 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">shield</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-2">Proteção &amp; Vitrificação</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema contra intempéries.
-                    </p>
-<a class="inline-flex items-center text-primary font-label-bold text-label-bold uppercase hover:text-primary-fixed transition-colors" href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer">
-                        Saiba Mais <span aria-hidden="true" class="material-symbols-outlined ml-1 text-sm">arrow_outward</span>
-</a>
-</div>
-<!-- Basic Wash -->
-<div class="md:col-span-6 rounded glass p-8 group hover:bg-surface-container-high transition-colors duration-300">
-<div class="flex justify-between items-start mb-6">
-<div class="text-outline-variant group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
-</div>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-2">Lavagem Premium</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        Processo minucioso com snow foam, pincéis de detalhamento para frestas e secagem com ar comprimido. Zero risco de micro-riscos.
-                    </p>
-</div>
-<!-- Polishing -->
-<div class="md:col-span-6 rounded glass p-8 group hover:bg-surface-container-high transition-colors duration-300">
-<div class="flex justify-between items-start mb-6">
-<div class="text-outline-variant group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">blur_on</span>
-</div>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface uppercase mb-2">Polimento Técnico</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-                        Correção de pintura em múltiplos estágios. Remoção de teias de aranha (hologramas) e riscos superficiais, devolvendo a clareza do verniz.
-                    </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Before & After (Results) -->
-<section class="py-24 bg-surface-container-low border-y border-outline-variant/20" id="resultados">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase mb-4">
-                    Padrão de <span class="text-primary italic">Resultados</span>
-</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                    A diferença entre lavar um carro e realizar um tratamento estético.
-                </p>
-</div>
-<div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-outline-variant/30 mx-auto max-w-5xl">
-<img alt="Hero Background" class="w-full h-full object-cover opacity-60" src="imagens/antes-e-depois.png"/>
-<!-- Overlay Labels -->
-<div class="absolute top-4 left-4 bg-surface-dim/80 backdrop-blur-sm px-4 py-1 rounded text-on-surface font-label-bold uppercase text-xs border border-outline-variant">Antes</div>
-<div class="absolute top-4 right-4 bg-primary-container/20 backdrop-blur-sm px-4 py-1 rounded text-primary font-label-bold uppercase text-xs border border-primary-container/50">Depois</div>
-</div>
-</div>
-</section>
-<!-- Social Proof -->
-<section class="py-24 bg-background relative overflow-hidden" id="depoimentos">
-<div class="absolute -right-[20%] top-0 w-[50%] h-[50%] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none"></div>
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase mb-12">
-                O que dizem <br/><span class="text-primary text-glow">nossos clientes</span>
-</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Testimonial 1 -->
-<div class="glass p-8 rounded flex flex-col justify-between">
-<div>
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic mb-6">
-                            "Impressionante o nível de detalhe. Levei meu Porsche para uma lavagem detalhada e o carro saiu parecendo que acabou de sair da concessionária. Serviço impecável e ambiente extremamente profissional."
-                        </p>
-</div>
-<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4 mt-auto">
-<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-bold uppercase">RM</div>
-<div>
-<div class="font-label-bold text-on-surface uppercase text-sm">Rafael M.</div>
-<div class="text-on-surface-variant text-xs">Porsche 911 Carrera</div>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="glass p-8 rounded flex flex-col justify-between">
-<div>
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic mb-6">
-                            "A vitrificação feita pelo estúdio mudou completamente a aparência do meu carro. O brilho é absurdo e a facilidade de lavar em casa agora é incrível. Recomendo de olhos fechados."
-                        </p>
-</div>
-<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4 mt-auto">
-<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-bold uppercase">LC</div>
-<div>
-<div class="font-label-bold text-on-surface uppercase text-sm">Lucas C.</div>
-<div class="text-on-surface-variant text-xs">BMW M3</div>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="glass p-8 rounded flex flex-col justify-between">
-<div>
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant italic mb-6">
-                            "A higienização interna removeu manchas que eu achava impossíveis de tirar. O cheiro de carro novo voltou. O atendimento é outro nível, explicam todo o processo com clareza."
-                        </p>
-</div>
-<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4 mt-auto">
-<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-label-bold uppercase">FS</div>
-<div>
-<div class="font-label-bold text-on-surface uppercase text-sm">Fernanda S.</div>
-<div class="text-on-surface-variant text-xs">Audi Q5</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Location & Contact -->
-<section class="py-24 bg-surface-container-low border-t border-outline-variant/20" id="unidades">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<!-- Info -->
-<div>
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-cyan mb-6">
-<span aria-hidden="true" class="material-symbols-outlined text-[16px] text-primary">location_on</span>
-<span class="font-label-bold text-label-bold text-primary uppercase text-[10px]">Studio Principal</span>
-</div>
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase mb-8">
-                        Onde a mágica <br/><span class="text-primary italic">Acontece</span>
-</h2>
-<div class="space-y-6 mb-10">
-<div class="flex items-start gap-4">
-<span aria-hidden="true" class="material-symbols-outlined text-outline mt-1">map</span>
-<div>
-<h4 class="font-label-bold text-on-surface uppercase mb-1">Endereço</h4>
-<p class="text-on-surface-variant">Av. Ary Tarragô, 1000<br/>Bairro Jardim Itu-Sabara<br/>Porto Alegre - RS</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span aria-hidden="true" class="material-symbols-outlined text-outline mt-1">schedule</span>
-<div>
-<h4 class="font-label-bold text-on-surface uppercase mb-1">Horário de Funcionamento</h4>
-<p class="text-on-surface-variant">Segunda a Sexta: 08:00 - 18:00<br/>Sábados: 08:00 - 14:00 (Apenas agendados)</p>
-</div>
-</div>
-</div>
-<a class="inline-flex items-center justify-center glass text-primary font-label-bold text-label-bold uppercase px-8 py-4 hover:bg-surface-variant hover:skew-x-[-5deg] transition-all duration-300 rounded-sm w-full sm:w-auto" href="#">
-<span aria-hidden="true" class="material-symbols-outlined mr-2">directions_car</span>
-                        Como Chegar (Waze)
-                    </a>
-</div>
-<!-- Map Placeholder -->
-<div class="aspect-square md:aspect-[4/3] bg-surface rounded border border-outline-variant/30 flex items-center justify-center relative overflow-hidden group">
-<img alt="Mapa de localização de Porto Alegre, estilo dark mode, minimalista." class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 grayscale" data-location="Porto Alegre"/>
-<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
-<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-<div class="w-12 h-12 bg-primary-container text-surface-dim rounded-full flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(0,229,255,0.4)] animate-bounce">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer (Shared Component) -->
-<footer class="w-full py-12 px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface-variant font-body-md text-body-md relative z-10">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto items-start">
-<div>
-<div class="font-headline-md text-on-surface uppercase mb-4 text-headline-md">LAVAGEM TARRAGÔ</div>
-<p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular com tecnologia e paixão.</p>
-</div>
-<div class="flex flex-col gap-2">
-<a class="font-label-bold text-label-bold uppercase hover:text-primary-fixed-dim transition-all duration-200" href="#">Polishing</a>
-<a class="font-label-bold text-label-bold uppercase hover:text-primary-fixed-dim transition-all duration-200" href="#">Ceramic Coating</a>
-<a class="font-label-bold text-label-bold uppercase hover:text-primary-fixed-dim transition-all duration-200" href="#">Interior</a>
-<a class="font-label-bold text-label-bold uppercase hover:text-primary-fixed-dim transition-all duration-200" href="#">Contact</a>
-</div>
-<div class="md:text-right text-sm">
-<p>© 2024 LAVAGEM TARRAGÔ. Porto Alegre - RS. CNPJ: 00.000.000/0001-00.</p>
-</div>
-</div>
-</footer>
-<!-- FAB: WhatsApp -->
-<button type="button" aria-label="Contato via WhatsApp" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-primary-container rounded-full flex items-center justify-center text-surface-dim box-glow hover:scale-110 hover:bg-primary-fixed transition-all duration-300 group" onclick="window.location.href='https://wa.me/5551999999999'">
-<span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform" style="font-variation-settings: 'FILL' 1;">chat</span>
-</button>
-<script>
-        // Header scroll effect
+<body class="bg-[#121414] text-[#e2e2e2] antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 w-full z-40 bg-[#121414]/80 backdrop-blur-md border-b border-[#3b494c]/20 transition-all duration-300 py-4">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 flex justify-between items-center">
+            <span class="font-['Bebas_Neue'] text-3xl md:text-5xl text-[#c3f5ff] uppercase italic tracking-tighter">LAVAGEM TARRAGÔ</span>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#servicos" class="font-['Montserrat'] text-[14px] font-bold uppercase text-[#bac9cc] hover:text-[#c3f5ff] transition-all duration-300">Serviços</a>
+                <a href="#resultados" class="font-['Montserrat'] text-[14px] font-bold uppercase text-[#bac9cc] hover:text-[#c3f5ff] transition-all duration-300">Resultados</a>
+                <a href="#depoimentos" class="font-['Montserrat'] text-[14px] font-bold uppercase text-[#bac9cc] hover:text-[#c3f5ff] transition-all duration-300">Depoimentos</a>
+                <a href="#unidades" class="font-['Montserrat'] text-[14px] font-bold uppercase text-[#bac9cc] hover:text-[#c3f5ff] transition-all duration-300">Unidades</a>
+            </nav>
+            <a href="#" id="headerAgendarBtn" class="hidden md:inline-flex items-center justify-center bg-[#00e5ff] text-[#00626e] font-['Montserrat'] text-[14px] font-bold uppercase px-6 py-3 rounded-sm hover:bg-[#9cf0ff] transition-all duration-300 box-glow">Agendar Horário</a>
+            <button id="mobileMenuBtn" class="md:hidden text-[#c3f5ff] p-2">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#121414] via-[#121414]/80 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-transparent to-transparent z-10"></div>
+            <img src="imagens/landing.png" class="w-full h-full object-cover opacity-60" alt="Carro sendo lavado - Estética automotiva premium">
+        </div>
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 w-full relative z-20">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00e5ff]/10 backdrop-blur-xl border border-[#00e5ff]/30 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-[#00e5ff] animate-pulse"></span>
+                    <span class="font-['Montserrat'] text-[10px] font-bold text-[#c3f5ff] uppercase">Estúdio de Detalhamento Premium</span>
+                </div>
+                <h1 class="font-['Bebas_Neue'] text-5xl md:text-7xl text-[#e2e2e2] uppercase mb-6 drop-shadow-xl tracking-wide">
+                    O brilho de carro zero <br><span class="text-[#c3f5ff] text-glow italic">que o seu veículo merece.</span>
+                </h1>
+                <p class="text-[18px] leading-relaxed text-[#bac9cc] mb-10 max-w-xl">Estética automotiva de alto padrão e lavagem detalhada para quem é apaixonado por carros. Precisão, técnica e os melhores produtos.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" id="heroAgendarBtn" class="inline-flex items-center justify-center bg-[#00e5ff] text-[#00626e] font-['Montserrat'] text-[14px] font-bold uppercase px-8 py-4 rounded-sm hover:bg-[#9cf0ff] transition-all duration-300 box-glow text-center">Quero agendar minha lavagem</a>
+                    <a href="#servicos" class="inline-flex items-center justify-center glass text-[#c3f5ff] font-['Montserrat'] text-[14px] font-bold uppercase px-8 py-4 rounded-sm hover:bg-[#282a2b] transition-all duration-300 group">Ver Serviços <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Bento -->
+    <section class="py-24 bg-[#121414] relative carbon-bg" id="servicos">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 relative z-10">
+            <div class="mb-16">
+                <h2 class="font-['Bebas_Neue'] text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">Nossos <span class="text-[#c3f5ff]">Serviços</span></h2>
+                <p class="text-[18px] text-[#bac9cc] max-w-2xl">Do cuidado essencial à restauração completa. Soluções de alto nível desenhadas para proteger e realçar seu investimento.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Higienização Detalhada -->
+                <div class="md:col-span-8 rounded overflow-hidden relative min-h-[400px] border border-[#3b494c]/30 bg-[#1e2020] hover:border-[#00e5ff]/50 transition-colors">
+                    <img src="imagens/higienizacao.png" class="w-full h-full object-cover opacity-60" alt="Higienização detalhada automotiva">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="inline-block bg-[#00e5ff] text-[#00626e] font-['Montserrat'] text-[10px] font-bold uppercase px-3 py-1 mb-4 rounded-sm">Mais Procurado</div>
+                        <h3 class="font-['Montserrat'] text-2xl font-black text-[#e2e2e2] uppercase mb-2">Higienização Detalhada</h3>
+                        <p class="text-[16px] text-[#bac9cc] mb-6 max-w-lg">Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção com ozônio.</p>
+                        <a href="#" class="serviceWhatsBtn inline-flex items-center text-[#c3f5ff] font-['Montserrat'] text-[14px] font-bold uppercase hover:text-[#9cf0ff] transition-colors" data-message="quero agendar minha lavagem">Agendar <span class="material-symbols-outlined ml-1 text-sm">arrow_outward</span></a>
+                    </div>
+                </div>
+                <!-- Proteção e Vitrificação -->
+                <div class="md:col-span-4 rounded overflow-hidden relative min-h-[400px] glass-cyan group flex flex-col justify-end p-8">
+                    <div class="absolute top-8 right-8 text-[#c3f5ff] opacity-50 group-hover:opacity-100 transition-opacity">
+                        <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+                    </div>
+                    <h3 class="font-['Montserrat'] text-2xl font-black text-[#e2e2e2] uppercase mb-2">Proteção &amp; Vitrificação</h3>
+                    <p class="text-[16px] text-[#bac9cc] mb-6">Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema.</p>
+                    <a href="#" class="serviceWhatsBtn inline-flex items-center text-[#c3f5ff] font-['Montserrat'] text-[14px] font-bold uppercase hover:text-[#9cf0ff] transition-colors" data-message="protecao e vitrificacao">Saiba Mais <span class="material-symbols-outlined ml-1 text-sm">arrow_outward</span></a>
+                </div>
+                <!-- Lavagem Premium -->
+                <div class="md:col-span-6 rounded glass p-8 group hover:bg-[#282a2b] transition-colors">
+                    <div class="text-[#3b494c] group-hover:text-[#c3f5ff] transition-colors mb-6"><span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">water_drop</span></div>
+                    <h3 class="font-['Montserrat'] text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem Premium</h3>
+                    <p class="text-[16px] text-[#bac9cc] mb-6">Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.</p>
+                    <a href="#" class="serviceWhatsBtn inline-flex items-center text-[#c3f5ff] font-['Montserrat'] text-[14px] font-bold uppercase hover:text-[#9cf0ff] transition-colors" data-message="agendar horario">Agendar horário <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span></a>
+                </div>
+                <!-- Polimento Técnico -->
+                <div class="md:col-span-6 rounded glass p-8 group hover:bg-[#282a2b] transition-colors">
+                    <div class="text-[#3b494c] group-hover:text-[#c3f5ff] transition-colors mb-6"><span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">blur_on</span></div>
+                    <h3 class="font-['Montserrat'] text-2xl font-black text-[#e2e2e2] uppercase mb-2">Polimento Técnico</h3>
+                    <p class="text-[16px] text-[#bac9cc] mb-6">Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.</p>
+                    <a href="#" class="serviceWhatsBtn inline-flex items-center text-[#c3f5ff] font-['Montserrat'] text-[14px] font-bold uppercase hover:text-[#9cf0ff] transition-colors" data-message="agendar horario">Agendar avaliação <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After -->
+    <section class="py-24 bg-[#1a1c1c] border-y border-[#3b494c]/20" id="resultados">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="font-['Bebas_Neue'] text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">Padrão de <span class="text-[#c3f5ff] italic">Resultados</span></h2>
+                <p class="text-[18px] text-[#bac9cc] max-w-2xl mx-auto">A diferença entre lavar um carro e realizar um tratamento estético.</p>
+            </div>
+            <div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-[#3b494c]/30 mx-auto max-w-5xl">
+                <img src="imagens/antes-e-depois.png" class="w-full h-full object-cover opacity-60" alt="Antes e depois do tratamento automotivo">
+                <div class="absolute top-4 left-4 bg-[#121414]/80 backdrop-blur-sm px-4 py-1 rounded text-[#e2e2e2] font-['Montserrat'] uppercase text-xs border border-[#3b494c]">Antes</div>
+                <div class="absolute top-4 right-4 bg-[#00e5ff]/20 backdrop-blur-sm px-4 py-1 rounded text-[#c3f5ff] font-['Montserrat'] uppercase text-xs border border-[#00e5ff]/50">Depois</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-24 bg-[#121414] relative overflow-hidden" id="depoimentos">
+        <div class="absolute -right-[20%] top-0 w-[50%] h-[50%] bg-[#00e5ff]/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12 relative z-10">
+            <h2 class="font-['Bebas_Neue'] text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-12">O que dizem <br><span class="text-[#c3f5ff] text-glow">nossos clientes</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded flex flex-col justify-between">
+                    <div><div class="flex text-[#c3f5ff] mb-4"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span></div>
+                    <p class="text-[16px] text-[#bac9cc] italic mb-6">"Impressionante o nível de detalhe. Carro saiu parecendo zero. Serviço impecável."</p></div>
+                    <div class="flex items-center gap-4 border-t border-[#3b494c]/30 pt-4"><div class="w-10 h-10 rounded-full bg-[#1e2020] flex items-center justify-center text-[#c3f5ff] font-bold">RM</div><div><div class="font-['Montserrat'] font-bold text-[#e2e2e2] uppercase text-sm">Rafael M.</div><div class="text-[#bac9cc] text-xs">Porsche 911</div></div></div>
+                </div>
+                <div class="glass p-8 rounded flex flex-col justify-between">
+                    <div><div class="flex text-[#c3f5ff] mb-4"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span></div>
+                    <p class="text-[16px] text-[#bac9cc] italic mb-6">"Vitrificação mudou tudo, brilho absurdo e facilidade na limpeza. Recomendo 100%."</p></div>
+                    <div class="flex items-center gap-4 border-t border-[#3b494c]/30 pt-4"><div class="w-10 h-10 rounded-full bg-[#1e2020] flex items-center justify-center text-[#c3f5ff] font-bold">LC</div><div><div class="font-['Montserrat'] font-bold text-[#e2e2e2] uppercase text-sm">Lucas C.</div><div class="text-[#bac9cc] text-xs">BMW M3</div></div></div>
+                </div>
+                <div class="glass p-8 rounded flex flex-col justify-between">
+                    <div><div class="flex text-[#c3f5ff] mb-4"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span></div>
+                    <p class="text-[16px] text-[#bac9cc] italic mb-6">"A higienização interna removeu manchas impossíveis. Atendimento diferenciado."</p></div>
+                    <div class="flex items-center gap-4 border-t border-[#3b494c]/30 pt-4"><div class="w-10 h-10 rounded-full bg-[#1e2020] flex items-center justify-center text-[#c3f5ff] font-bold">FS</div><div><div class="font-['Montserrat'] font-bold text-[#e2e2e2] uppercase text-sm">Fernanda S.</div><div class="text-[#bac9cc] text-xs">Audi Q5</div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unidades e Localização -->
+    <section class="py-24 bg-[#1a1c1c] border-t border-[#3b494c]/20" id="unidades">
+        <div class="max-w-[1280px] mx-auto px-4 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00e5ff]/10 backdrop-blur-xl border border-[#00e5ff]/30 mb-6"><span class="material-symbols-outlined text-[16px] text-[#c3f5ff]">location_on</span><span class="font-['Montserrat'] text-[10px] font-bold text-[#c3f5ff] uppercase">Studio Principal</span></div>
+                    <h2 class="font-['Bebas_Neue'] text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-8">Onde a mágica <br><span class="text-[#c3f5ff] italic">Acontece</span></h2>
+                    <div class="space-y-6 mb-10">
+                        <div class="flex gap-4"><span class="material-symbols-outlined text-[#bac9cc]">map</span><div><h4 class="font-['Montserrat'] font-bold text-[#e2e2e2] uppercase mb-1">Endereço</h4><p class="text-[#bac9cc]">Av. Ary Tarragô, 1000<br>Bairro Jardim Itu-Sabara<br>Porto Alegre - RS</p></div></div>
+                        <div class="flex gap-4"><span class="material-symbols-outlined text-[#bac9cc]">schedule</span><div><h4 class="font-['Montserrat'] font-bold text-[#e2e2e2] uppercase mb-1">Horário de Funcionamento</h4><p class="text-[#bac9cc]">Segunda a Sexta: 08:00 - 18:00<br>Sábados: 08:00 - 14:00 (Agendados)</p></div></div>
+                    </div>
+                    <a href="#" id="wazeMockBtn" class="inline-flex items-center justify-center glass text-[#c3f5ff] font-['Montserrat'] text-[14px] font-bold uppercase px-8 py-4 rounded-sm hover:bg-[#282a2b] transition-all w-full sm:w-auto"><span class="material-symbols-outlined mr-2">directions_car</span> Como Chegar (Waze)</a>
+                </div>
+                <div class="aspect-square md:aspect-[4/3] bg-[#1e2020] rounded border border-[#3b494c]/30 flex items-center justify-center relative overflow-hidden group">
+                    <img src="imagens/mapa.png" class="w-full h-full object-cover opacity-60 grayscale group-hover:opacity-80 transition duration-500" alt="Mapa de localização Porto Alegre">
+                    <div class="absolute inset-0 bg-[#c3f5ff]/10 mix-blend-overlay"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                        <div class="w-12 h-12 bg-[#00e5ff] text-[#121414] rounded-full flex items-center justify-center mb-2 shadow-[0_0_20px_rgba(0,229,255,0.4)] animate-bounce"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-[#3b494c]/30 text-[#bac9cc]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] mx-auto">
+            <div><div class="font-['Montserrat'] text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVAGEM TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
+            <div class="flex flex-col gap-2"><a href="#" class="serviceWhatsBtn font-['Montserrat'] text-sm font-bold uppercase hover:text-[#c3f5ff]" data-message="agendar horario">Polimento</a><a href="#" class="serviceWhatsBtn font-['Montserrat'] text-sm font-bold uppercase hover:text-[#c3f5ff]" data-message="protecao e vitrificacao">Ceramic Coating</a><a href="#" class="serviceWhatsBtn font-['Montserrat'] text-sm font-bold uppercase hover:text-[#c3f5ff]" data-message="quero agendar minha lavagem">Interior</a></div>
+            <div class="md:text-right text-sm">© 2025 LAVAGEM TARRAGÔ. Porto Alegre - RS. CNPJ: 00.000.000/0001-00.</div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button (FAB) -->
+    <button id="whatsappFab" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#00e5ff] rounded-full flex items-center justify-center text-[#121414] box-glow hover:scale-110 hover:bg-[#9cf0ff] transition-all duration-300 group cursor-pointer shadow-xl">
+        <span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform" style="font-variation-settings: 'FILL' 1;">chat</span>
+    </button>
+
+    <script>
+        // --- FUNÇÃO CENTRAL: REDIRECIONAMENTO WHATSAPP COM NÚMERO FIXO +5551999999999
+        const PHONE_NUMBER = "5551999999999";
+        const BASE_WA_URL = `https://wa.me/${PHONE_NUMBER}`;
+
+        function redirectToWhatsApp(messageText) {
+            let finalMsg = messageText ? messageText.trim() : "Olá, vim pelo site da Lavagem Tarragô e gostaria de mais informações.";
+            const encodedMsg = encodeURIComponent(finalMsg);
+            window.open(`${BASE_WA_URL}?text=${encodedMsg}`, '_blank');
+        }
+
+        // 1. Botão hero "Quero agendar minha lavagem"
+        const heroBtn = document.getElementById('heroAgendarBtn');
+        if (heroBtn) {
+            heroBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                redirectToWhatsApp("quero agendar minha lavagem");
+            });
+        }
+        
+        // 2. Botão header "Agendar Horário"
+        const headerBtn = document.getElementById('headerAgendarBtn');
+        if (headerBtn) {
+            headerBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                redirectToWhatsApp("agendar horario");
+            });
+        }
+
+        // 3. Todos os botões com classe .serviceWhatsBtn
+        const serviceBtns = document.querySelectorAll('.serviceWhatsBtn');
+        serviceBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const customMsg = btn.getAttribute('data-message');
+                if (customMsg) {
+                    redirectToWhatsApp(customMsg);
+                } else {
+                    redirectToWhatsApp("agendar horario");
+                }
+            });
+        });
+
+        // 4. FAB flutuante
+        const fab = document.getElementById('whatsappFab');
+        if (fab) {
+            fab.addEventListener('click', () => {
+                redirectToWhatsApp("agendar horario");
+            });
+        }
+
+        // 5. Links com #agendar
+        const agendarAnchors = document.querySelectorAll('a[href="#agendar"]');
+        agendarAnchors.forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                redirectToWhatsApp("quero agendar minha lavagem");
+            });
+        });
+
+        // Menu mobile
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        if(mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                alert("Menu mobile: Utilize o botão flutuante do WhatsApp para agendar.");
+            });
+        }
+        
+        // Scroll effect header
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
             if (window.scrollY > 50) {
-                header.classList.add('bg-surface/95', 'py-2');
-                header.classList.remove('bg-surface/80', 'py-4');
+                header.classList.add('bg-[#121414]/95', 'py-2');
+                header.classList.remove('bg-[#121414]/80', 'py-4');
             } else {
-                header.classList.add('bg-surface/80', 'py-4');
-                header.classList.remove('bg-surface/95', 'py-2');
+                header.classList.add('bg-[#121414]/80', 'py-4');
+                header.classList.remove('bg-[#121414]/95', 'py-2');
             }
         });
+        
+        const wazeMock = document.getElementById('wazeMockBtn');
+        if(wazeMock){
+            wazeMock.addEventListener('click', (e) => {
+                e.preventDefault();
+                redirectToWhatsApp("Olá, gostaria de informações sobre como chegar ao estúdio.");
+            });
+        }
     </script>
-</body></html>
+</body>
+</html>
