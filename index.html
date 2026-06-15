@@ -291,7 +291,7 @@
 
 <script>
 // WhatsApp Integration
-const WA_NUMBER = "5551990117123";
+const WA_NUMBER = "+5551990117123";
 const WA_URL = `https://wa.me/${WA_NUMBER}`;
 function sendWA(msg){ window.open(`${WA_URL}?text=${encodeURIComponent(msg || "Olá, vim pelo site da Lavacar Tarragô e gostaria de mais informações.")}`, '_blank'); }
 document.querySelectorAll('[data-wa]').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); sendWA(btn.getAttribute('data-wa')); }); });
