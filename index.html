@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Lavagem Tarragô | Estética Automotiva Premium</title>
+<title>Lavacar Tarragô | Estética Automotiva Premium</title>
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="stylesheet" href="style.css">
@@ -16,7 +17,7 @@
 <!-- ===== HEADER ===== -->
 <header id="header" class="fixed top-0 w-full z-40 bg-dark/80 backdrop-blur-md border-b border-[#3b494c]/20 transition-all duration-300 py-4">
   <div class="max-w-[1280px] mx-auto px-4 md:px-12 flex justify-between items-center">
-    <span class="font-bebas text-3xl md:text-5xl txt-cyan uppercase italic tracking-tighter">LAVAGEM TARRAGÔ</span>
+    <span class="font-kaushan text-3xl md:text-5xl txt-cyan tracking-tighter">LavaCar TARRAGÔ</span>
     <nav class="hidden md:flex items-center gap-8">
       <a href="#servicos" class="nav-link">Serviços</a>
       <a href="#resultados" class="nav-link">Resultados</a>
@@ -78,13 +79,14 @@
         <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/80 to-transparent"></div>
         <div class="absolute bottom-0 left-0 p-8 w-full">
           <div class="badge-primary mb-4">Mais Procurado</div>
-          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Higienização Detalhada</h3>
+          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem de Estofados</h3>
           <p class="text-[16px] txt-light mb-6 max-w-lg">Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção com ozônio.</p>
           <button class="link-service" data-wa="quero agendar minha lavagem">Agendar <span class="material-symbols-outlined text-sm">arrow_outward</span></button>
         </div>
       </div>
       <!-- Proteção -->
       <div class="glass-cyan md:col-span-4 rounded relative min-h-[400px] group flex flex-col justify-end p-8">
+         <img src="imagens/vitrificacao.png" class="w-full h-full object-cover opacity-60" alt="Higienização detalhada">
         <div class="absolute top-8 right-8 txt-cyan opacity-50 group-hover:opacity-100 transition-opacity">
           <span class="material-symbols-outlined text-4xl">shield</span>
         </div>
@@ -94,6 +96,7 @@
       </div>
       <!-- Lavagem Premium -->
       <div class="card-mini md:col-span-6">
+         <img src="imagens/lavagem.png" class="w-full h-full object-cover opacity-60" alt="Higienização detalhada">
         <div class="ico-service">water_drop</div>
         <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem Premium</h3>
         <p class="text-[16px] txt-light mb-6">Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.</p>
@@ -101,6 +104,7 @@
       </div>
       <!-- Polimento -->
       <div class="card-mini md:col-span-6">
+         <img src="imagens/polimento.png" class="w-full h-full object-cover opacity-60" alt="Higienização detalhada">
         <div class="ico-service">blur_on</div>
         <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Polimento Técnico</h3>
         <p class="text-[16px] txt-light mb-6">Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.</p>
@@ -239,13 +243,13 @@
 <!-- ===== FOOTER ===== -->
 <footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-[#3b494c]/30 txt-light">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] mx-auto">
-    <div><div class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVAGEM TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
+    <div><div class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVACAR TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
     <div class="flex flex-col gap-2">
       <button class="link-footer" data-wa="agendar horario">Polimento</button>
       <button class="link-footer" data-wa="protecao e vitrificacao">Ceramic Coating</button>
       <button class="link-footer" data-wa="quero agendar minha lavagem">Interior</button>
     </div>
-    <div class="md:text-right text-sm">© 2026 LAVAGEM TARRAGÔ. Porto Alegre - RS.</div>
+    <div class="md:text-right text-sm">© 2026 LAVACAR TARRAGÔ. Porto Alegre - RS.</div>
   </div>
 </footer>
 
@@ -255,32 +259,32 @@
 <style>
 /* Component Styles - Short & Descriptive */
 .nav-link { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; color: #bac9cc; transition: all 0.3s; }
-.nav-link:hover { color: #c3f5ff; }
-.btn-primary { display: inline-flex; align-items: center; justify-content: center; background-color: #00e5ff; color: #00626e; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; padding: 12px 24px; border-radius: 2px; transition: all 0.3s; box-shadow: 0 0 20px -5px #00e5ff; }
-.btn-primary:hover { background-color: #9cf0ff; }
+.nav-link:hover { color: #e7bdbd; }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; background-color: #b23b3b; color: #121414; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; padding: 12px 24px; border-radius: 2px; transition: all 0.3s; box-shadow: 0 0 20px -5px rgba(178,59,59,0.18); }
+.btn-primary:hover { background-color: #d88b8b; }
 .btn-large { padding: 16px 32px; }
-.btn-sec { display: inline-flex; align-items: center; justify-content: center; background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); color: #c3f5ff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; padding: 16px 32px; border-radius: 2px; transition: all 0.3s; }
+.btn-sec { display: inline-flex; align-items: center; justify-content: center; background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); color: #e7bdbd; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; padding: 16px 32px; border-radius: 2px; transition: all 0.3s; }
 .btn-sec:hover { background-color: #282a2b; }
-.badge-cyan { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background-color: rgba(0, 229, 255, 0.1); backdrop-filter: blur(24px); border: 1px solid rgba(0, 229, 255, 0.3); }
-.badge-primary { display: inline-block; background-color: #00e5ff; color: #00626e; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: bold; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; }
+.badge-cyan { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background-color: rgba(178,59,59,0.08); backdrop-filter: blur(24px); border: 1px solid rgba(178,59,59,0.18); }
+.badge-primary { display: inline-block; background-color: #b23b3b; color: #121414; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: bold; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; }
 .card-feat { border-radius: 4px; overflow: hidden; border: 1px solid rgba(59, 73, 76, 0.3); background-color: #1e2020; transition: border-color 0.3s; }
-.card-feat:hover { border-color: rgba(0, 229, 255, 0.5); }
+.card-feat:hover { border-color: rgba(178,59,59,0.25); }
 .card-mini { border-radius: 4px; background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); padding: 32px; transition: all 0.3s; }
 .card-mini:hover { background-color: #282a2b; }
 .ico-service { color: #3b494c; margin-bottom: 24px; transition: color 0.3s; }
-.card-mini:hover .ico-service { color: #c3f5ff; }
+.card-mini:hover .ico-service { color: #e7bdbd; }
 .ico-service::before { content: attr(data-icon); font-family: 'Material Symbols Outlined'; font-size: 36px; font-variation-settings: 'FILL' 1; }
-.link-service { display: inline-flex; align-items: center; color: #c3f5ff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; transition: color 0.3s; background: none; border: none; cursor: pointer; }
-.link-service:hover { color: #9cf0ff; }
+.link-service { display: inline-flex; align-items: center; color: #e7bdbd; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; transition: color 0.3s; background: none; border: none; cursor: pointer; }
+.link-service:hover { color: #d88b8b; }
 .card-testimonial { background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); padding: 32px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; }
-.stars { display: flex; color: #c3f5ff; margin-bottom: 16px; letter-spacing: 4px; }
+.stars { display: flex; color: #e7bdbd; margin-bottom: 16px; letter-spacing: 4px; }
 .map-area { aspect-ratio: 4/3; background-color: #1e2020; border-radius: 4px; border: 1px solid rgba(59, 73, 76, 0.3); position: relative; overflow: hidden; }
 .map-pin { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; }
-.pin-icon { width: 48px; height: 48px; background-color: #00e5ff; color: #121414; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); }
-.fab-wa { position: fixed; bottom: 32px; right: 32px; z-index: 50; width: 64px; height: 64px; background-color: #00e5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #121414; box-shadow: 0 0 20px -5px #00e5ff; transition: all 0.3s; cursor: pointer; border: none; }
-.fab-wa:hover { transform: scale(1.1); background-color: #9cf0ff; }
+.pin-icon { width: 48px; height: 48px; background-color: #b23b3b; color: #121414; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(178,59,59,0.18); }
+.fab-wa { position: fixed; bottom: 32px; right: 32px; z-index: 50; width: 64px; height: 64px; background-color: #b23b3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #121414; box-shadow: 0 0 20px -5px rgba(178,59,59,0.18); transition: all 0.3s; cursor: pointer; border: none; }
+.fab-wa:hover { transform: scale(1.1); background-color: #d88b8b; }
 .link-footer { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; color: inherit; transition: color 0.3s; text-align: left; background: none; border: none; cursor: pointer; }
-.link-footer:hover { color: #c3f5ff; }
+.link-footer:hover { color: #e7bdbd; }
 .animate-bounce { animation: bounce 1s infinite; }
 @keyframes bounce { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } }
 </style>
@@ -289,7 +293,7 @@
 // WhatsApp Integration
 const WA_NUMBER = "5551999999999";
 const WA_URL = `https://wa.me/${WA_NUMBER}`;
-function sendWA(msg){ window.open(`${WA_URL}?text=${encodeURIComponent(msg || "Olá, vim pelo site da Lavagem Tarragô e gostaria de mais informações.")}`, '_blank'); }
+function sendWA(msg){ window.open(`${WA_URL}?text=${encodeURIComponent(msg || "Olá, vim pelo site da Lavacar Tarragô e gostaria de mais informações.")}`, '_blank'); }
 document.querySelectorAll('[data-wa]').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); sendWA(btn.getAttribute('data-wa')); }); });
 // Header scroll
 window.addEventListener('scroll', () => {

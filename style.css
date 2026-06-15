@@ -8,6 +8,7 @@ body {
 /* Typography */
 .font-bebas { font-family: 'Bebas Neue', cursive; }
 .font-mont { font-family: 'Montserrat', sans-serif; }
+.font-kaushan { font-family: 'Kaushan Script', sans-serif; }
 /* Effects */
 .glass-bg {
   background: rgba(18, 20, 20, 0.4);
@@ -15,12 +16,12 @@ body {
   border: 1px solid rgba(59, 73, 76, 0.3);
 }
 .glass-cyan {
-  background: rgba(0, 229, 255, 0.1);
+  background: rgba(178,59,59,0.08);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 229, 255, 0.3);
+  border: 1px solid rgba(178,59,59,0.18);
 }
-.txt-glow { text-shadow: 0 0 8px #00e5ff; }
-.box-glow { box-shadow: 0 0 20px -5px #00e5ff; }
+.txt-glow { text-shadow: 0 0 8px rgba(178,59,59,0.22); }
+.box-glow { box-shadow: 0 0 20px -5px rgba(178,59,59,0.18); }
 .carbon-bg {
   background-image: radial-gradient(#3b494c 1px, transparent 1px);
   background-size: 24px 24px;
@@ -29,12 +30,22 @@ html { scroll-behavior: smooth; }
 .transition-smooth { transition: all 0.25s ease-in-out; }
 .bg-dark\/80 { background-color: rgba(18, 20, 20, 0.8); }
 .bg-dark\/95 { background-color: rgba(18, 20, 20, 0.95); }
-.txt-cyan { color: #c3f5ff; }
-.txt-cyan-bright { color: #00e5ff; }
-.bg-cyan-bright { background-color: #00e5ff; }
-.txt-cyan-dark { color: #00626e; }
-.border-cyan\/50 { border-color: rgba(0, 229, 255, 0.5); }
+.txt-cyan { color: #e7bdbd; }
+.txt-cyan-bright { color: #b23b3b; }
+.bg-cyan-bright { background-color: #b23b3b; }
+.txt-cyan-dark { color: #3b1212; }
+.border-cyan\/50 { border-color: rgba(178,59,59,0.5); }
 .bg-surface { background-color: #1e2020; }
 .bg-surface-low { background-color: #1a1c1c; }
 .bg-dim { background-color: #121414; }
 .txt-light { color: #bac9cc; }
+
+/* Ajuste para imagens dentro dos cards menores (Lavagem Premium / Polimento) */
+.card-mini img {
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  display: block;
+  margin: 0 auto 18px;
+  object-fit: cover;
+}
