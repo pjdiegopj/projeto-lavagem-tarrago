@@ -7,7 +7,6 @@
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="stylesheet" href="style.css">
@@ -17,7 +16,7 @@
 <!-- ===== HEADER ===== -->
 <header id="header" class="fixed top-0 w-full z-40 bg-dark/80 backdrop-blur-md border-b border-[#3b494c]/20 transition-all duration-300 py-4">
   <div class="max-w-[1280px] mx-auto px-4 md:px-12 flex justify-between items-center">
-    <span class="font-kaushan text-3xl md:text-5xl txt-cyan tracking-tighter">LavaCar TARRAGÔ</span>
+     <span class="font-bebas text-3xl md:text-5xl txt-cyan uppercase italic tracking-tighter">LAVACAR TARRAGÔ</span>
     <nav class="hidden md:flex items-center gap-8">
       <a href="#servicos" class="nav-link">Serviços</a>
       <a href="#resultados" class="nav-link">Resultados</a>
@@ -243,7 +242,7 @@
 <!-- ===== FOOTER ===== -->
 <footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-[#3b494c]/30 txt-light">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] mx-auto">
-    <div><div class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVACAR TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
+    <div><div class="font-bebas text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVACAR TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
     <div class="flex flex-col gap-2">
       <button class="link-footer" data-wa="agendar horario">Polimento</button>
       <button class="link-footer" data-wa="protecao e vitrificacao">Ceramic Coating</button>
@@ -255,39 +254,6 @@
 
 <!-- ===== WHATSAPP FAB ===== -->
 <button id="waFab" class="fab-wa" data-wa="agendar horario"><span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">chat</span></button>
-
-<style>
-/* Component Styles - Short & Descriptive */
-.nav-link { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; color: #bac9cc; transition: all 0.3s; }
-.nav-link:hover { color: #e7bdbd; }
-.btn-primary { display: inline-flex; align-items: center; justify-content: center; background-color: #b23b3b; color: #121414; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; padding: 12px 24px; border-radius: 2px; transition: all 0.3s; box-shadow: 0 0 20px -5px rgba(178,59,59,0.18); }
-.btn-primary:hover { background-color: #d88b8b; }
-.btn-large { padding: 16px 32px; }
-.btn-sec { display: inline-flex; align-items: center; justify-content: center; background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); color: #e7bdbd; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; padding: 16px 32px; border-radius: 2px; transition: all 0.3s; }
-.btn-sec:hover { background-color: #282a2b; }
-.badge-cyan { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background-color: rgba(178,59,59,0.08); backdrop-filter: blur(24px); border: 1px solid rgba(178,59,59,0.18); }
-.badge-primary { display: inline-block; background-color: #b23b3b; color: #121414; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: bold; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; }
-.card-feat { border-radius: 4px; overflow: hidden; border: 1px solid rgba(59, 73, 76, 0.3); background-color: #1e2020; transition: border-color 0.3s; }
-.card-feat:hover { border-color: rgba(178,59,59,0.25); }
-.card-mini { border-radius: 4px; background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); padding: 32px; transition: all 0.3s; }
-.card-mini:hover { background-color: #282a2b; }
-.ico-service { color: #3b494c; margin-bottom: 24px; transition: color 0.3s; }
-.card-mini:hover .ico-service { color: #e7bdbd; }
-.ico-service::before { content: attr(data-icon); font-family: 'Material Symbols Outlined'; font-size: 36px; font-variation-settings: 'FILL' 1; }
-.link-service { display: inline-flex; align-items: center; color: #e7bdbd; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; transition: color 0.3s; background: none; border: none; cursor: pointer; }
-.link-service:hover { color: #d88b8b; }
-.card-testimonial { background: rgba(18, 20, 20, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(59, 73, 76, 0.3); padding: 32px; border-radius: 4px; display: flex; flex-direction: column; justify-content: space-between; }
-.stars { display: flex; color: #e7bdbd; margin-bottom: 16px; letter-spacing: 4px; }
-.map-area { aspect-ratio: 4/3; background-color: #1e2020; border-radius: 4px; border: 1px solid rgba(59, 73, 76, 0.3); position: relative; overflow: hidden; }
-.map-pin { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; }
-.pin-icon { width: 48px; height: 48px; background-color: #b23b3b; color: #121414; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(178,59,59,0.18); }
-.fab-wa { position: fixed; bottom: 32px; right: 32px; z-index: 50; width: 64px; height: 64px; background-color: #b23b3b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #121414; box-shadow: 0 0 20px -5px rgba(178,59,59,0.18); transition: all 0.3s; cursor: pointer; border: none; }
-.fab-wa:hover { transform: scale(1.1); background-color: #d88b8b; }
-.link-footer { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; color: inherit; transition: color 0.3s; text-align: left; background: none; border: none; cursor: pointer; }
-.link-footer:hover { color: #e7bdbd; }
-.animate-bounce { animation: bounce 1s infinite; }
-@keyframes bounce { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } }
-</style>
 
 <script>
 // WhatsApp Integration
