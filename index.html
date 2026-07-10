@@ -73,10 +73,10 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
       <!-- Higienização -->
-      <div class="card-feat md:col-span-8 relative min-h-[400px]">
-        <img src="./imagens/higienizacao.jpg" class="w-full h-full object-cover opacity-60" alt="Higienização detalhada de estofados">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/10 to-transparent"></div>
-        <div class="absolute bottom-0 left-0 p-8 w-full">
+      <div class="card-feat md:col-span-8 relative min-h-[400px] overflow-hidden group">
+        <img src="./imagens/higienizacao.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Higienização detalhada de estofados">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/30 to-transparent z-10"></div>
+        <div class="absolute bottom-0 left-0 p-8 w-full z-20">
           <div class="badge-primary mb-4">Mais Procurado</div>
           <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem de Estofados</h3>
           <p class="text-[16px] txt-light mb-6 max-w-lg">Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção com ozônio.</p>
@@ -84,30 +84,39 @@
         </div>
       </div>
       <!-- Proteção -->
-      <div class="glass-cyan md:col-span-4 rounded relative min-h-[400px] group flex flex-col justify-end p-8">
-         <img src="./imagens/vitrificacao.jpg" class="w-full h-full object-cover opacity-60" alt="Proteção e Vitrificação de pintura">
-        <div class="absolute top-8 right-8 txt-cyan opacity-50 group-hover:opacity-100 transition-opacity">
+      <div class="glass-cyan md:col-span-4 rounded relative min-h-[400px] overflow-hidden group flex flex-col justify-end p-8">
+        <img src="./imagens/vitrificacao.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Proteção e Vitrificação de pintura">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/30 to-transparent z-10"></div>
+        <div class="absolute top-8 right-8 txt-cyan opacity-50 group-hover:opacity-100 transition-opacity z-20">
           <span class="material-symbols-outlined text-4xl">shield</span>
         </div>
-        <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Proteção &amp; Vitrificação</h3>
-        <p class="text-[16px] txt-light mb-6">Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema.</p>
-        <button class="link-service" data-wa="protecao e vitrificacao">Saiba Mais <span class="material-symbols-outlined text-sm">arrow_outward</span></button>
+        <div class="relative z-20">
+          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Proteção &amp; Vitrificação</h3>
+          <p class="text-[16px] txt-light mb-6">Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema.</p>
+          <button class="link-service" data-wa="protecao e vitrificacao">Saiba Mais <span class="material-symbols-outlined text-sm">arrow_outward</span></button>
+        </div>
       </div>
       <!-- Lavagem Premium -->
-      <div class="card-mini md:col-span-6">
-         <img src="./imagens/lavagem.jpg" class="w-full h-full object-cover opacity-60" alt="Lavagem Premium Detalhada">
-        <div class="ico-service">water_drop</div>
-        <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem Premium</h3>
-        <p class="text-[16px] txt-light mb-6">Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.</p>
-        <button class="link-service" data-wa="agendar horario">Agendar horário <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+      <div class="card-mini md:col-span-6 relative min-h-[400px] overflow-hidden flex flex-col justify-end p-8 group">
+        <img src="./imagens/lavagem.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Lavagem Premium Detalhada">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/40 to-transparent z-10"></div>
+        <div class="relative z-20">
+          <div class="ico-service">water_drop</div>
+          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem Premium</h3>
+          <p class="text-[16px] txt-light mb-6">Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.</p>
+          <button class="link-service" data-wa="agendar horario">Agendar horário <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+        </div>
       </div>
       <!-- Polimento -->
-      <div class="card-mini md:col-span-6">
-         <img src="./imagens/polimento.jpg" class="w-full h-full object-cover opacity-60" alt="Polimento Técnico e Correção de Pintura">
-        <div class="ico-service">blur_on</div>
-        <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Polimento Técnico</h3>
-        <p class="text-[16px] txt-light mb-6">Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.</p>
-        <button class="link-service" data-wa="agendar horario">Agendar avaliação <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+      <div class="card-mini md:col-span-6 relative min-h-[400px] overflow-hidden flex flex-col justify-end p-8 group">
+        <img src="./imagens/polimento.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Polimento Técnico e Correção de Pintura">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/40 to-transparent z-10"></div>
+        <div class="relative z-20">
+          <div class="ico-service">blur_on</div>
+          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Polimento Técnico</h3>
+          <p class="text-[16px] txt-light mb-6">Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.</p>
+          <button class="link-service" data-wa="agendar horario">Agendar avaliação <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+        </div>
       </div>
     </div>
   </div>

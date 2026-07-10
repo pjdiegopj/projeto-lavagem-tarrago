@@ -39,15 +39,6 @@ html { scroll-behavior: smooth; }
 .bg-dim { background-color: #121414; }
 .txt-light { color: #bac9cc; }
 
-/* Ajuste para imagens dentro dos cards menores (Lavagem Premium / Polimento) */
-.card-mini img {
-  max-width: 100%;
-  height: auto;
-  max-height: 180px;
-  display: block;
-  margin: 0 auto 18px;
-  object-fit: cover;
-}
 
 /* Component Styles - Short & Descriptive */
 .nav-link { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: bold; text-transform: uppercase; color: #bac9cc; transition: all 0.3s; }
