@@ -9,14 +9,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            DEFAULT: '#c92a2a', // Softer carmine red
+            hover: '#e03131',   // Soft bright hover
+            dark: '#2b0c10',    // Dark crimson background tint
+            light: '#ffd8db',   // Soft accent text red
+          }
+        }
+      }
+    }
+  }
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased overflow-x-hidden">
 
 <!-- ===== HEADER ===== -->
-<header id="header" class="fixed top-0 w-full z-40 bg-dark/80 backdrop-blur-md border-b border-[#3b494c]/20 transition-all duration-300 py-4">
+<header id="header" class="fixed top-0 w-full z-40 bg-dark/80 backdrop-blur-md border-b border-brand/20 transition-all duration-300 py-4">
   <div class="max-w-[1280px] mx-auto px-4 md:px-12 flex justify-between items-center">
-     <span class="font-bebas text-3xl md:text-5xl txt-cyan uppercase italic tracking-tighter">LAVACAR TARRAGÔ</span>
+     <span class="font-bebas text-3xl md:text-5xl txt-brand uppercase italic tracking-tighter">LAVACAR TARRAGÔ</span>
     <nav class="hidden md:flex items-center gap-8">
       <a href="#servicos" class="nav-link">Serviços</a>
       <a href="#resultados" class="nav-link">Resultados</a>
@@ -24,7 +40,7 @@
       <a href="#endereço" class="nav-link">Endereço</a>
     </nav>
     <button class="btn-primary hidden md:inline-flex" data-wa="agendar horario">Agendar Horário</button>
-    <button id="mobileBtn" class="md:hidden txt-cyan p-2"><span class="material-symbols-outlined">menu</span></button>
+    <button id="mobileBtn" class="md:hidden txt-brand p-2"><span class="material-symbols-outlined">menu</span></button>
   </div>
 </header>
 
@@ -37,13 +53,13 @@
   </div>
   <div class="max-w-[1280px] mx-auto px-4 md:px-12 w-full relative z-20">
     <div class="max-w-2xl">
-      <div class="badge-cyan mb-6">
-        <span class="w-2 h-2 rounded-full bg-cyan-bright animate-pulse"></span>
-        <span class="font-mont text-[10px] font-bold txt-cyan uppercase">Estúdio de Detalhamento Premium</span>
+      <div class="badge-brand mb-6">
+        <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+        <span class="font-mont text-[10px] font-bold txt-brand uppercase">Estúdio de Detalhamento Premium</span>
       </div>
       <h1 class="font-bebas text-5xl md:text-7xl text-[#e2e2e2] uppercase mb-6 drop-shadow-xl">
         O brilho de carro zero <br>
-        <span class="txt-cyan txt-glow italic">que o seu veículo merece.</span>
+        <span class="txt-brand txt-glow italic">que o seu veículo merece.</span>
       </h1>
       <p class="text-[18px] leading-relaxed txt-light mb-10 max-w-xl">
         Estética automotiva de alto padrão e lavagem detalhada para quem é apaixonado por carros. 
@@ -65,7 +81,7 @@
   <div class="max-w-[1280px] mx-auto px-4 md:px-12">
     <div class="mb-16">
       <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">
-        Nossos <span class="txt-cyan">Serviços</span>
+        Nossos <span class="txt-brand">Serviços</span>
       </h2>
       <p class="text-[18px] txt-light max-w-2xl">
         Do cuidado essencial à restauração completa. Soluções de alto nível desenhadas para proteger e realçar seu investimento.
@@ -84,10 +100,10 @@
         </div>
       </div>
       <!-- Proteção -->
-      <div class="glass-cyan md:col-span-4 rounded relative min-h-[400px] overflow-hidden group flex flex-col justify-end p-8">
+      <div class="glass-brand md:col-span-4 rounded relative min-h-[400px] overflow-hidden group flex flex-col justify-end p-8">
         <img src="./imagens/vitrificacao.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Proteção e Vitrificação de pintura">
         <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/30 to-transparent z-10"></div>
-        <div class="absolute top-8 right-8 txt-cyan opacity-50 group-hover:opacity-100 transition-opacity z-20">
+        <div class="absolute top-8 right-8 txt-brand opacity-50 group-hover:opacity-100 transition-opacity z-20">
           <span class="material-symbols-outlined text-4xl">shield</span>
         </div>
         <div class="relative z-20">
@@ -123,15 +139,15 @@
 </section>
 
 <!-- ===== BEFORE & AFTER ===== -->
-<section class="py-24 bg-surface-low border-y border-[#3b494c]/20" id="resultados">
+<section class="py-24 bg-surface-low border-y border-brand/20" id="resultados">
   <div class="max-w-[1280px] mx-auto px-4 md:px-12">
     <div class="text-center mb-16">
       <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">
-        Padrão de <span class="txt-cyan italic">Resultados</span>
+        Padrão de <span class="txt-brand italic">Resultados</span>
       </h2>
       <p class="text-[18px] txt-light max-w-2xl mx-auto">A diferença entre lavar um carro e realizar um tratamento estético.</p>
     </div>
-    <div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-[#3b494c]/30 mx-auto max-w-5xl">
+    <div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-brand/30 mx-auto max-w-5xl">
       <div class="relative w-full h-full overflow-hidden">
         <div id="carrosselTrack" class="flex transition-transform duration-500 ease-out h-full">
           <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois1.png" class="w-full h-full object-cover" alt="Foto 1"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">1 / 10</div></div>
@@ -183,33 +199,33 @@
 
 <!-- ===== TESTIMONIALS ===== -->
 <!-- <section class="py-24 bg-dim relative overflow-hidden" id="depoimentos">
-  <div class="absolute -right-[20%] top-0 w-[50%] h-[50%] bg-cyan-bright/5 blur-[120px] rounded-full"></div>
+  <div class="absolute -right-[20%] top-0 w-[50%] h-[50%] bg-brand/5 blur-[120px] rounded-full"></div>
   <div class="max-w-[1280px] mx-auto px-4 md:px-12 relative z-10">
     <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-12">
-      O que dizem <br><span class="txt-cyan txt-glow">nossos clientes</span>
+      O que dizem <br><span class="txt-brand txt-glow">nossos clientes</span>
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card-testimonial">
         <div class="stars">★★★★★</div>
         <p class="text-[16px] txt-light italic mb-6">"Impressionante o nível de detalhe. Carro saiu parecendo zero. Serviço impecável."</p>
-        <div class="flex items-center gap-4 border-t border-[#3b494c]/30 pt-4">
-          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-cyan font-bold">RM</div>
+        <div class="flex items-center gap-4 border-t border-brand/30 pt-4">
+          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-brand font-bold">RM</div>
           <div><div class="font-mont font-bold text-[#e2e2e2] uppercase text-sm">Rafael M.</div><div class="txt-light text-xs">Porsche 911</div></div>
         </div>
       </div>
       <div class="card-testimonial">
         <div class="stars">★★★★★</div>
         <p class="text-[16px] txt-light italic mb-6">"Vitrificação mudou tudo, brilho absurdo e facilidade na limpeza. Recomendo 100%."</p>
-        <div class="flex items-center gap-4 border-t border-[#3b494c]/30 pt-4">
-          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-cyan font-bold">LC</div>
+        <div class="flex items-center gap-4 border-t border-brand/30 pt-4">
+          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-brand font-bold">LC</div>
           <div><div class="font-mont font-bold text-[#e2e2e2] uppercase text-sm">Lucas C.</div><div class="txt-light text-xs">BMW M3</div></div>
         </div>
       </div>
       <div class="card-testimonial">
         <div class="stars">★★★★★</div>
         <p class="text-[16px] txt-light italic mb-6">"A higienização interna removeu manchas impossíveis. Atendimento diferenciado."</p>
-        <div class="flex items-center gap-4 border-t border-[#3b494c]/30 pt-4">
-          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-cyan font-bold">FS</div>
+        <div class="flex items-center gap-4 border-t border-brand/30 pt-4">
+          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-brand font-bold">FS</div>
           <div><div class="font-mont font-bold text-[#e2e2e2] uppercase text-sm">Fernanda S.</div><div class="txt-light text-xs">Audi Q5</div></div>
         </div>
       </div>
@@ -218,16 +234,16 @@
 </section>
  !-->
 <!-- ===== LOCATIONS ===== -->
-<section class="py-24 bg-surface-low border-t border-[#3b494c]/20" id="endereço">
+<section class="py-24 bg-surface-low border-t border-brand/20" id="endereço">
   <div class="max-w-[1280px] mx-auto px-4 md:px-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div>
-        <div class="badge-cyan mb-6">
-          <span class="material-symbols-outlined text-[16px] txt-cyan">location_on</span>
-          <span class="font-mont text-[10px] font-bold txt-cyan uppercase">Studio Principal</span>
+        <div class="badge-brand mb-6">
+          <span class="material-symbols-outlined text-[16px] txt-brand">location_on</span>
+          <span class="font-mont text-[10px] font-bold txt-brand uppercase">Studio Principal</span>
         </div>
         <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-8">
-          Onde a mágica <br><span class="txt-cyan italic">Acontece</span>
+          Onde a mágica <br><span class="txt-brand italic">Acontece</span>
         </h2>
         <div class="space-y-6 mb-10">
           <div class="flex gap-4">
@@ -249,7 +265,7 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-[#3b494c]/30 txt-light">
+<footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-brand/30 txt-light">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] mx-auto">
     <div><div class="font-bebas text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVACAR TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
     <div class="flex flex-col gap-2">
