@@ -72,12 +72,11 @@ body {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(var(--color-brand-rgb), 0.2);
   transition: all 0.3s ease;
-  height: 6rem;
+  height: 5rem;
 }
 
 .header.scrolled {
   background-color: rgba(18, 20, 20, 0.95);
-  padding: 8px 0;
 }
 
 .header-inner {
@@ -88,27 +87,31 @@ body {
 
 .logo-box {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
+  line-height: 1;
 }
 
 .logo {
   font-family: "Pacifico", cursive;
-  font-size: 32px;
+  font-size: 26px;
   font-style: italic;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   color: var(--color-brand);
+  line-height: 1;
+  padding-top: 1rem;
 }
 
 .logo2 {
   font-family: 'Bebas Neue', cursive;
-  font-size: 32px;
-  font-style: italic;
-  letter-spacing: -0.02em;
+  font-size: 14px;
   color: var(--color-brand);
   text-transform: uppercase;
-  padding: 20px 0px 0px 10px
+  line-height: 1;
+  margin-top: 2px;
+  padding-left: 1.4rem;
+  font-weight: 700
 }
 
 .nav {
@@ -873,9 +876,13 @@ body {
     padding: 0 48px;
   }
   
-  .logo,
+  .logo {
+    font-size: 36px;
+  }
+  
   .logo2 {
-    font-size: 48px;
+    font-size: 18px;
+    letter-spacing: 0.28em;
   }
   
   .nav {
