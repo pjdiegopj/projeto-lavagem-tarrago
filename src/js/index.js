@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close menu when clicking link
-    nav.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
+    // Close menu when clicking link or action button
+    nav.querySelectorAll('.nav-link, .btn-mobile-nav').forEach(item => {
+      item.addEventListener('click', () => {
         nav.classList.remove('active');
         const icon = mobileBtn.querySelector('.material-symbols-outlined');
         if (icon) icon.textContent = 'menu';
