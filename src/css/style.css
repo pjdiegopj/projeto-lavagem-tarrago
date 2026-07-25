@@ -83,11 +83,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .logo-box {
   display: inline-flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   text-decoration: none;
   line-height: 1;
@@ -100,7 +102,6 @@ body {
   letter-spacing: -0.03em;
   color: var(--color-brand);
   line-height: 1;
-  padding-top: 1rem;
 }
 
 .logo2 {
@@ -118,6 +119,7 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
 }
 
@@ -147,10 +149,12 @@ body {
 
 .btn-mobile {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-brand);
   background: none;
   border: none;
-  padding: 1.6rem;
+  padding: 6px;
   cursor: pointer;
 }
 
