@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/css/reset.css">
 <link rel="stylesheet" href="./src/css/style.css">
+<link rel="stylesheet" href="./src/css/responsivo.css">
 </head>
 <body>
 
@@ -158,28 +159,7 @@
         </div>
       </div>
     </div>
-    <script>
-    (function(){
-      const track = document.getElementById('carrosselTrack');
-      const slides = document.querySelectorAll('#carrosselTrack > div');
-      const prev = document.getElementById('prevBtn');
-      const next = document.getElementById('nextBtn');
-      const dots = document.querySelectorAll('.dot');
-      let idx = 0, total = slides.length;
-      function update(){
-        track.style.transform = `translateX(-${idx * 100}%)`;
-        dots.forEach((dot,i)=>{
-          if(i===idx){ dot.classList.add('active'); }
-          else{ dot.classList.remove('active'); }
-        });
-      }
-      function nextSlide(){ idx = (idx+1)%total; update(); }
-      function prevSlide(){ idx = (idx-1+total)%total; update(); }
-      if(prev) prev.addEventListener('click',prevSlide);
-      if(next) next.addEventListener('click',nextSlide);
-      dots.forEach(dot=>{ dot.addEventListener('click',()=>{ idx=parseInt(dot.dataset.idx); update(); }); });
-    })();
-    </script>
+
   </div>
 </section>
 
@@ -288,22 +268,6 @@
 <!-- ===== WHATSAPP FAB ===== -->
 <button id="waFab" class="fab-wa" data-wa="agendar horario"><span class="material-symbols-outlined ico-wa">chat</span></button>
 
-<script>
-// WhatsApp Integration
-const WA_NUMBER = "5551990117123";
-const WA_URL = `https://wa.me/${WA_NUMBER}`;
-function sendWA(msg){ window.open(`${WA_URL}?text=${encodeURIComponent(msg || "Olá, vim pelo site da Lavacar Tarragô e gostaria de mais informações.")}`, '_blank'); }
-document.querySelectorAll('[data-wa]').forEach(btn => { btn.addEventListener('click', (e) => { e.preventDefault(); sendWA(btn.getAttribute('data-wa')); }); });
-// Header scroll
-window.addEventListener('scroll', () => {
-  const header = document.getElementById('header');
-  if(window.scrollY > 50){ header.classList.add('scrolled'); }
-  else{ header.classList.remove('scrolled'); }
-});
-// Mobile menu alert
-document.getElementById('mobileBtn')?.addEventListener('click', () => alert("Utilize o botão do WhatsApp para agendar seus serviços."));
-// Fix icons
-document.querySelectorAll('.ico-service').forEach(el => { const name = el.textContent?.trim(); if(name){ el.setAttribute('data-icon', name); el.textContent = ''; } });
-</script>
+<script src="./src/js/index.js"></script>
 </body>
 </html>

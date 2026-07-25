@@ -1,0 +1,144 @@
+/* ===== MOBILE MENU & RESPONSIVE BREAKPOINTS ===== */
+
+/* Mobile Navigation Menu */
+@media (max-width: 767px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 20, 20, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(var(--color-brand-rgb), 0.2);
+    padding: 24px 32px;
+    gap: 20px;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  }
+
+  .nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ===== MEDIA QUERIES (Responsive Breakpoints) ===== */
+@media (min-width: 640px) {
+  .hero-actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 48px;
+  }
+  
+  .logo {
+    font-size: 36px;
+  }
+  
+  .logo2 {
+    font-size: 18px;
+    letter-spacing: 0.28em;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    padding: 0;
+    gap: 32px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 0;
+    border-bottom: none;
+    width: auto;
+  }
+  
+  .desktop-only {
+    display: inline-flex;
+  }
+  
+  .btn-mobile {
+    display: none;
+  }
+  
+  .hero-overlay-b {
+    background: linear-gradient(to right, #121414, rgba(18, 20, 20, 0.8), transparent);
+  }
+  
+  .hero-img {
+    object-position: center;
+  }
+  
+  .hero-title {
+    font-size: 72px;
+  }
+  
+  .sec-title {
+    font-size: 48px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  .service-lg {
+    grid-column: span 8;
+  }
+  
+  .service-sm {
+    grid-column: span 4;
+  }
+  
+  .service-half {
+    grid-column: span 6;
+  }
+  
+  .carousel-wrapper {
+    aspect-ratio: 2 / 1;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .location-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-copy {
+    text-align: right;
+  }
+}
