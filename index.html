@@ -7,69 +7,55 @@
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          brand: {
-            DEFAULT: '#c92a2a', // Softer carmine red
-            hover: '#e03131',   // Soft bright hover
-            dark: '#2b0c10',    // Dark crimson background tint
-            light: '#ffd8db',   // Soft accent text red
-          }
-        }
-      }
-    }
-  }
-</script>
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/css/reset.css">
+<link rel="stylesheet" href="./src/css/style.css">
 </head>
-<body class="antialiased overflow-x-hidden">
+<body>
 
 <!-- ===== HEADER ===== -->
-<header id="header" class="fixed top-0 w-full z-40 bg-dark/80 backdrop-blur-md border-b border-brand/20 transition-all duration-300 py-4">
-  <div class="max-w-[1280px] mx-auto px-4 md:px-12 flex justify-between items-center">
-     <span class="font-bebas text-3xl md:text-5xl txt-brand uppercase italic tracking-tighter">LAVACAR TARRAGÔ</span>
-    <nav class="hidden md:flex items-center gap-8">
+<header id="header" class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo-box">
+      <span class="logo">LavaCar</span>
+      <span class="logo2">TARRAGÔ</span>
+    </a>
+    <nav class="nav">
       <a href="#servicos" class="nav-link">Serviços</a>
       <a href="#resultados" class="nav-link">Resultados</a>
-      <!-- <a href="#depoimentos" class="nav-link">Depoimentos</a> -->
       <a href="#endereço" class="nav-link">Endereço</a>
     </nav>
-    <button class="btn-primary hidden md:inline-flex" data-wa="agendar horario">Agendar Horário</button>
-    <button id="mobileBtn" class="md:hidden txt-brand p-2"><span class="material-symbols-outlined">menu</span></button>
+    <button class="btn-primary desktop-only" data-wa="agendar horario">Agendar Horário</button>
+    <button id="mobileBtn" class="btn-mobile"><span class="material-symbols-outlined">menu</span></button>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#121414]/80 to-[#121414] md:bg-gradient-to-r md:from-[#121414] md:via-[#121414]/80 md:to-transparent z-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-transparent to-transparent z-10"></div>
-    <img src="./imagens/landing.jpg" class="w-full h-full object-cover object-[70%_center] md:object-center opacity-65" alt="Carro sendo lavado">
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay-b"></div>
+    <div class="hero-overlay-t"></div>
+    <img src="./src/imagens/landing.jpg" class="hero-img" alt="Carro sendo lavado">
   </div>
-  <div class="max-w-[1280px] mx-auto px-4 md:px-12 w-full relative z-20">
-    <div class="max-w-2xl">
-      <div class="badge-brand mb-6">
-        <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
-        <span class="font-mont text-[10px] font-bold txt-brand uppercase">Estúdio de Detalhamento Premium</span>
+  <div class="container hero-content">
+    <div class="hero-text">
+      <div class="badge-brand">
+        <span class="badge-dot"></span>
+        <span class="badge-text">Estúdio de Detalhamento Premium</span>
       </div>
-      <h1 class="font-bebas text-5xl md:text-7xl text-[#e2e2e2] uppercase mb-6 drop-shadow-xl">
+      <h1 class="hero-title">
         O brilho de carro zero <br>
         <span class="txt-brand txt-glow italic">que o seu veículo merece.</span>
       </h1>
-      <p class="text-[18px] leading-relaxed txt-light mb-10 max-w-xl">
+      <p class="hero-desc">
         Estética automotiva de alto padrão e lavagem detalhada para quem é apaixonado por carros. 
         Precisão, técnica e os melhores produtos.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4">
+      <div class="hero-actions">
         <button class="btn-primary btn-large" data-wa="quero agendar minha lavagem">Quero agendar minha lavagem</button>
-        <a href="#servicos" class="btn-sec group">
+        <a href="#servicos" class="btn-sec">
           Ver Serviços 
-          <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          <span class="material-symbols-outlined ico-arrow">arrow_forward</span>
         </a>
       </div>
     </div>
@@ -77,61 +63,61 @@
 </section>
 
 <!-- ===== SERVICES ===== -->
-<section class="py-24 bg-dim carbon-bg" id="servicos">
-  <div class="max-w-[1280px] mx-auto px-4 md:px-12">
-    <div class="mb-16">
-      <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">
+<section class="sec-services carbon-bg" id="servicos">
+  <div class="container">
+    <div class="sec-header">
+      <h2 class="sec-title">
         Nossos <span class="txt-brand">Serviços</span>
       </h2>
-      <p class="text-[18px] txt-light max-w-2xl">
+      <p class="sec-desc">
         Do cuidado essencial à restauração completa. Soluções de alto nível desenhadas para proteger e realçar seu investimento.
       </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <div class="services-grid">
       <!-- Higienização -->
-      <div class="card-feat md:col-span-8 relative min-h-[400px] overflow-hidden group">
-        <img src="./imagens/higienizacao.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Higienização detalhada de estofados">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/30 to-transparent z-10"></div>
-        <div class="absolute bottom-0 left-0 p-8 w-full z-20">
-          <div class="badge-primary mb-4">Mais Procurado</div>
-          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem de Estofados</h3>
-          <p class="text-[16px] txt-light mb-6 max-w-lg">Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção com ozônio.</p>
-          <button class="link-service" data-wa="quero agendar minha lavagem">Agendar <span class="material-symbols-outlined text-sm">arrow_outward</span></button>
+      <div class="card-feat service-lg">
+        <img src="./src/imagens/higienizacao.jpg" class="card-bg-img" alt="Higienização detalhada de estofados">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="badge-primary">Mais Procurado</div>
+          <h3 class="card-title">Lavagem de Estofados</h3>
+          <p class="card-desc">Limpeza profunda do interior. Remoção de manchas, hidratação de couro e desinfecção com ozônio.</p>
+          <button class="link-service" data-wa="quero agendar minha lavagem">Agendar <span class="material-symbols-outlined ico-sm">arrow_outward</span></button>
         </div>
       </div>
       <!-- Proteção -->
-      <div class="glass-brand md:col-span-4 rounded relative min-h-[400px] overflow-hidden group flex flex-col justify-end p-8">
-        <img src="./imagens/vitrificacao.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Proteção e Vitrificação de pintura">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/30 to-transparent z-10"></div>
-        <div class="absolute top-8 right-8 txt-brand opacity-50 group-hover:opacity-100 transition-opacity z-20">
-          <span class="material-symbols-outlined text-4xl">shield</span>
+      <div class="glass-brand service-sm">
+        <img src="./src/imagens/vitrificacao.jpg" class="card-bg-img" alt="Proteção e Vitrificação de pintura">
+        <div class="card-overlay"></div>
+        <div class="card-icon-top">
+          <span class="material-symbols-outlined">shield</span>
         </div>
-        <div class="relative z-20">
-          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Proteção &amp; Vitrificação</h3>
-          <p class="text-[16px] txt-light mb-6">Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema.</p>
-          <button class="link-service" data-wa="protecao e vitrificacao">Saiba Mais <span class="material-symbols-outlined text-sm">arrow_outward</span></button>
+        <div class="card-content">
+          <h3 class="card-title">Proteção &amp; Vitrificação</h3>
+          <p class="card-desc">Revestimentos cerâmicos (Ceramic Coating) de última geração para brilho espelhado e proteção extrema.</p>
+          <button class="link-service" data-wa="protecao e vitrificacao">Saiba Mais <span class="material-symbols-outlined ico-sm">arrow_outward</span></button>
         </div>
       </div>
       <!-- Lavagem Premium -->
-      <div class="card-mini md:col-span-6 relative min-h-[400px] overflow-hidden flex flex-col justify-end p-8 group">
-        <img src="./imagens/lavagem.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Lavagem Premium Detalhada">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/40 to-transparent z-10"></div>
-        <div class="relative z-20">
+      <div class="card-mini service-half">
+        <img src="./src/imagens/lavagem.jpg" class="card-bg-img" alt="Lavagem Premium Detalhada">
+        <div class="card-overlay"></div>
+        <div class="card-content">
           <div class="ico-service">water_drop</div>
-          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Lavagem Premium</h3>
-          <p class="text-[16px] txt-light mb-6">Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.</p>
-          <button class="link-service" data-wa="agendar horario">Agendar horário <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+          <h3 class="card-title">Lavagem Completa e Simples</h3>
+          <p class="card-desc">Processo snow foam, pincéis de detalhamento, secagem com ar comprimido. Zero risco de micro-riscos.</p>
+          <button class="link-service" data-wa="agendar horario">Agendar horário <span class="material-symbols-outlined ico-sm">arrow_forward</span></button>
         </div>
       </div>
       <!-- Polimento -->
-      <div class="card-mini md:col-span-6 relative min-h-[400px] overflow-hidden flex flex-col justify-end p-8 group">
-        <img src="./imagens/polimento.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500 z-0" alt="Polimento Técnico e Correção de Pintura">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#121414] via-[#121414]/40 to-transparent z-10"></div>
-        <div class="relative z-20">
+      <div class="card-mini service-half">
+        <img src="./src/imagens/polimento.jpg" class="card-bg-img" alt="Polimento Técnico e Correção de Pintura">
+        <div class="card-overlay"></div>
+        <div class="card-content">
           <div class="ico-service">blur_on</div>
-          <h3 class="font-mont text-2xl font-black text-[#e2e2e2] uppercase mb-2">Polimento Técnico</h3>
-          <p class="text-[16px] txt-light mb-6">Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.</p>
-          <button class="link-service" data-wa="agendar horario">Agendar avaliação <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+          <h3 class="card-title">Polimento Técnico</h3>
+          <p class="card-desc">Correção de pintura em múltiplos estágios. Remoção de hologramas e riscos superficiais.</p>
+          <button class="link-service" data-wa="agendar horario">Agendar avaliação <span class="material-symbols-outlined ico-sm">arrow_forward</span></button>
         </div>
       </div>
     </div>
@@ -139,36 +125,36 @@
 </section>
 
 <!-- ===== BEFORE & AFTER ===== -->
-<section class="py-24 bg-surface-low border-y border-brand/20" id="resultados">
-  <div class="max-w-[1280px] mx-auto px-4 md:px-12">
-    <div class="text-center mb-16">
-      <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-4">
+<section class="sec-results" id="resultados">
+  <div class="container">
+    <div class="sec-header text-center">
+      <h2 class="sec-title">
         Padrão de <span class="txt-brand italic">Resultados</span>
       </h2>
-      <p class="text-[18px] txt-light max-w-2xl mx-auto">A diferença entre lavar um carro e realizar um tratamento estético.</p>
+      <p class="sec-desc center">A diferença entre lavar um carro e realizar um tratamento estético.</p>
     </div>
-    <div class="relative w-full aspect-video md:aspect-[2/1] rounded overflow-hidden border border-brand/30 mx-auto max-w-5xl">
-      <div class="relative w-full h-full overflow-hidden">
-        <div id="carrosselTrack" class="flex transition-transform duration-500 ease-out h-full">
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois1.png" class="w-full h-full object-cover" alt="Foto 1"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">1 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois2.png" class="w-full h-full object-cover" alt="Foto 2"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">2 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois3.png" class="w-full h-full object-cover" alt="Foto 3"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">3 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois4.png" class="w-full h-full object-cover" alt="Foto 4"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">4 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois5.png" class="w-full h-full object-cover" alt="Foto 5"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">5 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois6.png" class="w-full h-full object-cover" alt="Foto 6"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">6 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois7.png" class="w-full h-full object-cover" alt="Foto 7"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">7 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois8.png" class="w-full h-full object-cover" alt="Foto 8"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">8 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois9.png" class="w-full h-full object-cover" alt="Foto 9"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">9 / 10</div></div>
-          <div class="min-w-full h-full relative flex-shrink-0"><img src="./imagens/antes-e-depois10.png" class="w-full h-full object-cover" alt="Foto 10"><div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded text-white text-xs">10 / 10</div></div>
+    <div class="carousel-wrapper">
+      <div class="carousel-container">
+        <div id="carrosselTrack" class="carousel-track">
+          <div class="slide"><img src="./src/imagens/antes-e-depois1.png" alt="Foto 1"><div class="slide-badge">1 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois2.png" alt="Foto 2"><div class="slide-badge">2 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois3.png" alt="Foto 3"><div class="slide-badge">3 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois4.png" alt="Foto 4"><div class="slide-badge">4 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois5.png" alt="Foto 5"><div class="slide-badge">5 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois6.png" alt="Foto 6"><div class="slide-badge">6 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois7.png" alt="Foto 7"><div class="slide-badge">7 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois8.png" alt="Foto 8"><div class="slide-badge">8 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois9.png" alt="Foto 9"><div class="slide-badge">9 / 10</div></div>
+          <div class="slide"><img src="./src/imagens/antes-e-depois10.png" alt="Foto 10"><div class="slide-badge">10 / 10</div></div>
         </div>
-        <button id="prevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 z-10"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
-        <button id="nextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 z-10"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-          <div class="dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" data-idx="0"></div>
-          <div class="dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" data-idx="1"></div>
-          <div class="dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" data-idx="2"></div>
-          <div class="dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" data-idx="3"></div>
-          <div class="dot w-2 h-2 rounded-full bg-white/50 cursor-pointer" data-idx="4"></div>
+        <button id="prevBtn" class="carousel-btn btn-prev" aria-label="Anterior"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></button>
+        <button id="nextBtn" class="carousel-btn btn-next" aria-label="Próximo"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></button>
+        <div class="carousel-dots">
+          <div class="dot active" data-idx="0"></div>
+          <div class="dot" data-idx="1"></div>
+          <div class="dot" data-idx="2"></div>
+          <div class="dot" data-idx="3"></div>
+          <div class="dot" data-idx="4"></div>
         </div>
       </div>
     </div>
@@ -183,8 +169,8 @@
       function update(){
         track.style.transform = `translateX(-${idx * 100}%)`;
         dots.forEach((dot,i)=>{
-          if(i===idx){ dot.classList.remove('bg-white/50'); dot.classList.add('bg-white','scale-125'); }
-          else{ dot.classList.remove('bg-white','scale-125'); dot.classList.add('bg-white/50'); }
+          if(i===idx){ dot.classList.add('active'); }
+          else{ dot.classList.remove('active'); }
         });
       }
       function nextSlide(){ idx = (idx+1)%total; update(); }
@@ -198,86 +184,109 @@
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
-<section class="py-24 bg-dim relative overflow-hidden" id="depoimentos">
-  <div class="absolute -right-[20%] top-0 w-[50%] h-[50%] bg-brand/5 blur-[120px] rounded-full"></div>
-  <div class="max-w-[1280px] mx-auto px-4 md:px-12 relative z-10">
-    <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-12">
+<section class="sec-testimonials" id="depoimentos">
+  <div class="glow-bg"></div>
+  <div class="container">
+    <h2 class="sec-title">
       O que dizem <br><span class="txt-brand txt-glow">nossos clientes</span>
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="testimonials-grid">
       <div class="card-testimonial">
         <div class="stars">★★★★★</div>
-        <p class="text-[16px] txt-light italic mb-6">"Impressionante o nível de detalhe. Carro saiu parecendo zero. Serviço impecável."</p>
-        <div class="flex items-center gap-4 border-t border-brand/30 pt-4">
-          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-brand font-bold">RM</div>
-          <div><div class="font-mont font-bold text-[#e2e2e2] uppercase text-sm">Rafael M.</div><div class="txt-light text-xs">Porsche 911</div></div>
+        <p class="testimonial-text">"Impressionante o nível de detalhe. Carro saiu parecendo zero. Serviço impecável."</p>
+        <div class="author-info">
+          <div class="author-avatar">RM</div>
+          <div>
+            <div class="author-name">Rafael M.</div>
+            <div class="author-car">Porsche 911</div>
+          </div>
         </div>
       </div>
       <div class="card-testimonial">
         <div class="stars">★★★★★</div>
-        <p class="text-[16px] txt-light italic mb-6">"Vitrificação mudou tudo, brilho absurdo e facilidade na limpeza. Recomendo 100%."</p>
-        <div class="flex items-center gap-4 border-t border-brand/30 pt-4">
-          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-brand font-bold">LC</div>
-          <div><div class="font-mont font-bold text-[#e2e2e2] uppercase text-sm">Lucas C.</div><div class="txt-light text-xs">BMW M3</div></div>
+        <p class="testimonial-text">"Vitrificação mudou tudo, brilho absurdo e facilidade na limpeza. Recomendo 100%."</p>
+        <div class="author-info">
+          <div class="author-avatar">LC</div>
+          <div>
+            <div class="author-name">Lucas C.</div>
+            <div class="author-car">BMW M3</div>
+          </div>
         </div>
       </div>
       <div class="card-testimonial">
         <div class="stars">★★★★★</div>
-        <p class="text-[16px] txt-light italic mb-6">"A higienização interna removeu manchas impossíveis. Atendimento diferenciado."</p>
-        <div class="flex items-center gap-4 border-t border-brand/30 pt-4">
-          <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center txt-brand font-bold">FS</div>
-          <div><div class="font-mont font-bold text-[#e2e2e2] uppercase text-sm">Fernanda S.</div><div class="txt-light text-xs">Audi Q5</div></div>
+        <p class="testimonial-text">"A higienização interna removeu manchas impossíveis. Atendimento diferenciado."</p>
+        <div class="author-info">
+          <div class="author-avatar">FS</div>
+          <div>
+            <div class="author-name">Fernanda S.</div>
+            <div class="author-car">Audi Q5</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- ===== LOCATIONS ===== -->
-<section class="py-24 bg-surface-low border-t border-brand/20" id="endereço">
-  <div class="max-w-[1280px] mx-auto px-4 md:px-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<section class="sec-location" id="endereço">
+  <div class="container">
+    <div class="location-grid">
       <div>
-        <div class="badge-brand mb-6">
-          <span class="material-symbols-outlined text-[16px] txt-brand">location_on</span>
-          <span class="font-mont text-[10px] font-bold txt-brand uppercase">Studio Principal</span>
+        <div class="badge-brand">
+          <span class="material-symbols-outlined txt-brand ico-sm">location_on</span>
+          <span class="badge-text">Studio Principal</span>
         </div>
-        <h2 class="font-bebas text-4xl md:text-5xl text-[#e2e2e2] uppercase mb-8">
+        <h2 class="sec-title">
           Onde a mágica <br><span class="txt-brand italic">Acontece</span>
         </h2>
-        <div class="space-y-6 mb-10">
-          <div class="flex gap-4">
+        <div class="info-list">
+          <div class="info-item">
             <span class="material-symbols-outlined txt-light">map</span>
-            <div><h4 class="font-mont font-bold text-[#e2e2e2] uppercase mb-1">Endereço</h4><p class="txt-light">R. Tenente Ary Tarrago, 1594<br> Jardim-Itu,<br>Porto Alegre RS</p></div>
+            <div>
+              <h4 class="info-label">Endereço</h4>
+              <p class="txt-light">R. Tenente Ary Tarrago, 1594<br> Jardim-Itu,<br>Porto Alegre RS</p>
+            </div>
           </div>
-          <div class="flex gap-4">
+          <div class="info-item">
             <span class="material-symbols-outlined txt-light">schedule</span>
-            <div><h4 class="font-mont font-bold text-[#e2e2e2] uppercase mb-1">Horário de Funcionamento</h4><p class="txt-light">Segunda a Sexta: 08:00 - 18:00<br>Sábados: 08:00 - 14:00 (Agendados)</p></div>
+            <div>
+              <h4 class="info-label">Horário de Funcionamento</h4>
+              <p class="txt-light">Segunda a Sexta: 08:00 - 18:00<br>Sábados: 08:00 - 14:00 (Agendados)</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="map-area group">
-        <img src="./imagens/mapa.png" class="w-full h-full object-cover opacity-60 grayscale group-hover:opacity-80 transition duration-500" alt="Mapa">
-        <div class="map-pin"><div class="pin-icon animate-bounce"><span class="material-symbols-outlined">location_on</span></div></div>
+      <div class="map-area">
+        <img src="./src/imagens/mapa.png" class="map-img" alt="Mapa">
+        <div class="map-pin">
+          <div class="pin-icon animate-bounce">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer class="w-full py-12 px-6 md:px-12 bg-[#0c0f0f] border-t border-brand/30 txt-light">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1280px] mx-auto">
-    <div><div class="font-bebas text-2xl font-black text-[#e2e2e2] uppercase mb-4">LAVACAR TARRAGÔ</div><p class="text-sm">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p></div>
-    <div class="flex flex-col gap-2">
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo">LAVACAR TARRAGÔ</div>
+      <p class="footer-desc">Estética automotiva de precisão. Elevando o padrão do cuidado veicular.</p>
+    </div>
+    <div class="footer-links">
       <button class="link-footer" data-wa="agendar horario">Polimento</button>
       <button class="link-footer" data-wa="protecao e vitrificacao">Ceramic Coating</button>
       <button class="link-footer" data-wa="quero agendar minha lavagem">Interior</button>
     </div>
-    <div class="md:text-right text-sm">© 2026 LAVACAR TARRAGÔ. Porto Alegre - RS.</div>
+    <div class="footer-copy">© 2026 LAVACAR TARRAGÔ. Porto Alegre - RS.</div>
   </div>
 </footer>
 
 <!-- ===== WHATSAPP FAB ===== -->
-<button id="waFab" class="fab-wa" data-wa="agendar horario"><span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">chat</span></button>
+<button id="waFab" class="fab-wa" data-wa="agendar horario"><span class="material-symbols-outlined ico-wa">chat</span></button>
 
 <script>
 // WhatsApp Integration
@@ -288,8 +297,8 @@ document.querySelectorAll('[data-wa]').forEach(btn => { btn.addEventListener('cl
 // Header scroll
 window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
-  if(window.scrollY > 50){ header.classList.add('bg-dark/95','py-2'); header.classList.remove('bg-dark/80','py-4'); }
-  else{ header.classList.add('bg-dark/80','py-4'); header.classList.remove('bg-dark/95','py-2'); }
+  if(window.scrollY > 50){ header.classList.add('scrolled'); }
+  else{ header.classList.remove('scrolled'); }
 });
 // Mobile menu alert
 document.getElementById('mobileBtn')?.addEventListener('click', () => alert("Utilize o botão do WhatsApp para agendar seus serviços."));
