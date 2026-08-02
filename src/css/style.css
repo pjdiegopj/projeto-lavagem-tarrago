@@ -568,8 +568,12 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.btn-prev { left: 8px; }
-.btn-next { right: 8px; }
+.btn-prev { left: 8px; 
+background-color: var(--color-brand-hover);
+}
+.btn-next { right: 8px; 
+background-color: var(--color-brand-hover);
+}
 
 .carousel-dots {
   position: absolute;
