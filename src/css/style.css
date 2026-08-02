@@ -495,12 +495,12 @@ body {
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1376 / 768;
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid rgba(var(--color-brand-rgb), 0.3);
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 1376px;
 }
 
 .carousel-container {
