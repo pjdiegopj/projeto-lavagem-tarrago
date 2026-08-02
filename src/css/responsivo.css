@@ -68,6 +68,11 @@
   .nav-link:last-child {
     border-bottom: none;
   }
+
+  .hero-img {
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
 /* ===== MEDIA QUERIES (Responsive Breakpoints) ===== */
@@ -127,10 +132,6 @@
 
   .btn-mobile {
     display: none;
-  }
-  
-  .hero-overlay-b {
-    background: linear-gradient(to right, #121414, rgba(18, 20, 20, 0.8), transparent);
   }
   
   .hero-img {
